@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,21 +21,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private cards card_data[];
-    private arrayAdapter arrayAdapter;
+    private ArrayList<String> al;
+    private ArrayAdapter<String> arrayAdapter;
     private int i;
 
     private FirebaseAuth mAuth;
-
-    private String currentUid;
-    private DatabaseReference userDb;
-
-    ListView listView;
-    List<cards> rowItems;
 
 
     @Override
@@ -44,17 +36,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        userDb = FirebaseDatabase.getInstance().getReference().child("Users");
-
         mAuth = FirebaseAuth.getInstance();
-
-        currentUid = mAuth.getCurrentUser().getUid();
 
         checkUserSex();
 
-        rowItems = new ArrayList<cards>();
 
-        arrayAdapter = new arrayAdapter(this, R.layout.item, rowItems );
+        al = new ArrayList<>();
+
+
+        arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, al );
 
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
@@ -65,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void removeFirstObjectInAdapter() {
                 // this is the simplest way to delete an object from the Adapter (/AdapterView)
                 Log.d("LIST", "removed object!");
-                rowItems.remove(0);
+                al.remove(0);
                 arrayAdapter.notifyDataSetChanged();
             }
 
@@ -84,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
-                // Ask for more data here
             }
 
             @Override
@@ -182,8 +171,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 if (dataSnapshot.exists()){
-                    cards item = new cards(dataSnapshot.getKey(),dataSnapshot.child("name").getValue().toString());
-                    rowItems.add(item);
+                    al.add(dataSnapshot.child("name").getValue().toString());
                     arrayAdapter.notifyDataSetChanged();
                 }
             }
