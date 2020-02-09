@@ -5,22 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Chat.ChatActivity">
-
+    tools:context="com.synnlabz.seist.Chat.ChatActivity">
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/sendLayout">
-
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/recyclerView"
             android:scrollbars="vertical">
         </androidx.recyclerview.widget.RecyclerView>
-
     </androidx.core.widget.NestedScrollView>
-
     <LinearLayout
         android:id="@+id/sendLayout"
         android:layout_width="match_parent"

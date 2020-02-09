@@ -4,25 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".RegistrationActivity">
-
+    tools:context="com.synnlabz.seist.RegistrationActivity"
+    android:orientation="vertical">
     <EditText
-        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Emai"/>
-
+        android:hint="email"
+        android:id="@+id/email"/>
     <EditText
-        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"/>
-
+        android:hint="password"
+        android:id="@+id/password"/>
     <Button
-        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"/>
-
+        android:text="Login"
+        android:id="@+id/login"/>
 </LinearLayout>
