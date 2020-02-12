@@ -26,6 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.synnlabz.seist.Matches.MatchesActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -203,4 +204,18 @@ public class SettingsActivity extends AppCompatActivity {
         finish();
         return;
     }
+
+    public void goToHome(View view) {
+        Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
+        startActivity(intent);
+        return;
+    }
+
+    public void goToMatches(View view) {
+        Intent intent = new Intent(SettingsActivity.this, MatchesActivity.class);
+        startActivity(intent);
+        return;
+    }
+
+
 }

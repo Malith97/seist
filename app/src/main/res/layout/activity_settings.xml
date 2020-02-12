@@ -1,12 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.synnlabz.seist.SettingsActivity"
     android:orientation="vertical"
-    android:background="@drawable/grad_bg"
-    android:padding="10sp">
+    android:background="@drawable/grad_bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightred"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightred"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/tabChats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chats"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="goToMatches"
+            android:background="@color/lightred"/>
+
+        <Button
+            android:id="@+id/tabStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Home"
+            android:onClick="goToHome"
+            android:layout_weight="1"
+            android:background="@color/lightred"/>
+
+        <Button
+            android:id="@+id/tabCalls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Profile"
+            android:layout_weight="1"
+            android:background="@color/lightred"/>
+
+    </LinearLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage"
@@ -87,65 +131,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearlayout_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/linearlayout_2"
-        android:layout_marginTop="10dp">
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_phone_black_24dp"
-            android:layout_marginLeft="10dp"/>
-
-        <EditText
-            android:id="@+id/age"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Age"
-            android:layout_below="@+id/faculty"
-            android:layout_marginBottom="20sp"
-            android:inputType="phone"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/white"/>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linearlayout_4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/linearlayout_3"
-        android:layout_marginTop="10dp">
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_phone_black_24dp"
-            android:layout_marginLeft="10dp"/>
-
-        <EditText
-            android:id="@+id/year"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Academic Year"
-            android:layout_marginBottom="20sp"
-            android:inputType="phone"
-            android:layout_below="@+id/age"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/white"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearlayout_5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -208,4 +193,4 @@
     </LinearLayout>
 
 
-</RelativeLayout>
+</LinearLayout>

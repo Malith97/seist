@@ -7,23 +7,51 @@
     tools:context="com.synnlabz.seist.MainActivity"
     android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@color/lightred"
+        android:minHeight="?attr/actionBarSize" />
+
+    <LinearLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightred"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@android:color/white"
+        android:weightSum="3">
 
         <Button
-            android:layout_weight="1"
+            android:id="@+id/tabChats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Matches"
-            android:onClick="goToMatches" />
+            android:text="Chats"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="goToMatches"
+            android:background="@color/lightred"/>
+
         <Button
-            android:layout_weight="1"
+            android:id="@+id/tabStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Settings"
-            android:onClick="goToSettings" />
+            android:textColor="@color/white"
+            android:text="Home"
+            android:layout_weight="1"
+            android:background="@color/lightred"/>
+
+        <Button
+            android:id="@+id/tabCalls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Profile"
+            android:layout_weight="1"
+            android:onClick="goToSettings"
+            android:background="@color/lightred"/>
+
     </LinearLayout>
 
     <com.lorentzos.flingswipe.SwipeFlingAdapterView
