@@ -6,17 +6,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.synnlabz.seist.Chat.ChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightred"
+        android:minHeight="?attr/actionBarSize">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="backToMatches"
+            android:background="@color/lightred"
+            android:fontFamily="@font/g_light"
+            android:textColor="@color/white"
+            android:text="back"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/default_user"
+            android:layout_marginLeft="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Name"
+            android:fontFamily="@font/g_light"
+            android:textColor="@color/white"
+            android:layout_marginLeft="25sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/sendLayout">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/recyclerView"
             android:scrollbars="vertical">
         </androidx.recyclerview.widget.RecyclerView>
+
     </androidx.core.widget.NestedScrollView>
+
     <LinearLayout
         android:id="@+id/sendLayout"
         android:layout_width="match_parent"
@@ -28,6 +65,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="message..."
+            android:fontFamily="@font/g_light"
             android:id="@+id/message"
             />
         <Button
@@ -35,6 +73,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Send"
+            android:fontFamily="@font/g_light"
             android:id="@+id/send"/>
     </LinearLayout>
 

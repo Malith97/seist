@@ -37,6 +37,7 @@
                 android:paddingLeft="20sp"
                 android:textColor="@android:color/black"
                 android:gravity="center|left"
+                android:fontFamily="@font/g_light"
                 tools:text="hello"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />

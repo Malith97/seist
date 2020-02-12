@@ -1,6 +1,8 @@
 package com.synnlabz.seist.Matches;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,7 +14,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.synnlabz.seist.MainActivity;
 import com.synnlabz.seist.R;
+import com.synnlabz.seist.SettingsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,6 +101,18 @@ public class MatchesActivity extends AppCompatActivity {
     private ArrayList<MatchesObject> resultsMatches = new ArrayList<MatchesObject>();
     private List<MatchesObject> getDataSetMatches() {
         return resultsMatches;
+    }
+
+    public void goToSettings(View view) {
+        Intent intent = new Intent(MatchesActivity.this, SettingsActivity.class);
+        startActivity(intent);
+        return;
+    }
+
+    public void goToHome(View view) {
+        Intent intent = new Intent(MatchesActivity.this, MainActivity.class);
+        startActivity(intent);
+        return;
     }
 
 }
