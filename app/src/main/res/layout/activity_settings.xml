@@ -1,43 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.synnlabz.seist.SettingsActivity"
     android:orientation="vertical"
-    android:padding="20sp">
-    <ImageView
-        android:layout_width="100sp"
-        android:layout_height="100sp"
+    android:background="@drawable/grad_bg"
+    android:padding="10sp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginBottom="20sp" />
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/default_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/name"
-        android:background="@null"
-        android:hint="Name"
-        android:layout_marginBottom="20sp"/>
-    <EditText
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/phone"
-        android:background="@null"
-        android:hint="Phone"
+        android:text="Name"
+        android:textSize="20sp"
         android:layout_marginBottom="20sp"
-        android:inputType="phone"/>
+        android:layout_below="@+id/profileImage"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"/>
 
-    <Button
+    <LinearLayout
+        android:id="@+id/linearlayout_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/confirm"
-        android:text="confirm"/>
-    <Button
+        android:orientation="horizontal"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_phone_black_24dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:layout_marginBottom="20sp"
+            android:inputType="phone"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/back"
-        android:text="back"/>
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearlayout_1"
+        android:layout_marginTop="10dp">
 
-</LinearLayout>
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_phone_black_24dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/faculty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone"
+            android:hint="Faculty"
+            android:layout_marginBottom="20sp"
+            android:inputType="phone"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearlayout_2"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_phone_black_24dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:layout_below="@+id/faculty"
+            android:layout_marginBottom="20sp"
+            android:inputType="phone"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearlayout_3"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_phone_black_24dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Academic Year"
+            android:layout_marginBottom="20sp"
+            android:inputType="phone"
+            android:layout_below="@+id/age"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/linearlayout_6"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/linearlayout_7"
+        android:layout_marginTop="0dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log-Out"
+            android:textStyle="bold"
+            android:onClick="logoutUser"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

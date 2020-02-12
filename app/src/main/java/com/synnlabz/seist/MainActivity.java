@@ -191,15 +191,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-    public void logoutUser(View view) {
-        mAuth.signOut();
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-        startActivity(intent);
-        finish();
-        return;
-    }
-
     public void goToSettings(View view) {
         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
         startActivity(intent);
