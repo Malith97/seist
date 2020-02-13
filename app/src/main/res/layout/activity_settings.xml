@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.synnlabz.seist.SettingsActivity"
-    android:orientation="vertical"
-    android:background="@drawable/grad_bg">
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -86,7 +85,7 @@
                 android:layout_centerHorizontal="true"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:id="@+id/linearlayout_1"
@@ -94,13 +93,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_below="@+id/name"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:src="@drawable/ic_phone_black_24dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"/>
 
                 <EditText
                     android:id="@+id/phone"
@@ -109,10 +111,10 @@
                     android:hint="Phone"
                     android:fontFamily="@font/g_light"
                     android:layout_marginBottom="20sp"
-                    android:inputType="phone"
-                    android:textStyle="bold"
+                    android:inputType="number"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"
+                    android:layout_marginRight="20sp"/>
 
 
             </LinearLayout>
@@ -123,13 +125,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_below="@+id/linearlayout_1"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/ic_phone_black_24dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:src="@drawable/ic_faculty"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"/>
 
                 <EditText
                     android:id="@+id/faculty"
@@ -139,10 +144,9 @@
                     android:hint="Faculty"
                     android:fontFamily="@font/g_light"
                     android:layout_marginBottom="20sp"
-                    android:inputType="phone"
-                    android:textStyle="bold"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"
+                    android:layout_marginRight="20sp"/>
 
 
             </LinearLayout>
@@ -153,13 +157,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_below="@+id/linearlayout_2"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/ic_phone_black_24dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:src="@drawable/ic_age"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"/>
 
                 <EditText
                     android:id="@+id/age"
@@ -167,12 +174,13 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/phone"
                     android:hint="Age"
+                    android:maxLength="3"
                     android:fontFamily="@font/g_light"
                     android:layout_marginBottom="20sp"
-                    android:inputType="phone"
-                    android:textStyle="bold"
+                    android:inputType="number"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"
+                    android:layout_marginRight="20sp"/>
 
 
             </LinearLayout>
@@ -183,13 +191,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_below="@+id/linearlayout_3"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/ic_phone_black_24dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:src="@drawable/ic_year"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"/>
 
                 <EditText
                     android:id="@+id/year"
@@ -197,12 +208,13 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/phone"
                     android:hint="Academic Year"
+                    android:maxLength="2"
                     android:fontFamily="@font/g_light"
                     android:layout_marginBottom="20sp"
-                    android:inputType="phone"
-                    android:textStyle="bold"
+                    android:inputType="number"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"
+                    android:layout_marginRight="20sp"/>
 
 
             </LinearLayout>
@@ -213,13 +225,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_below="@+id/linearlayout_4"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/ic_phone_black_24dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:src="@drawable/ic_bio"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"/>
 
                 <EditText
                     android:id="@+id/bio"
@@ -229,10 +244,10 @@
                     android:hint="About Me"
                     android:fontFamily="@font/g_light"
                     android:layout_marginBottom="20sp"
-                    android:inputType="phone"
-                    android:textStyle="bold"
+                    android:inputType="text"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"
+                    android:layout_marginRight="20sp"/>
 
 
             </LinearLayout>
@@ -243,17 +258,22 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_below="@+id/linearlayout_5"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginLeft="100dp">
 
                 <Button
-                    android:id="@+id/back"
+                    android:background="@drawable/button"
+                    android:id="@+id/confirm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Back"
+                    android:layout_below="@+id/phone"
+                    android:text="Confirm"
                     android:fontFamily="@font/g_light"
                     android:layout_marginBottom="5sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"/>
 
 
             </LinearLayout>
@@ -264,42 +284,22 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_below="@+id/linearlayout_6"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginLeft="100dp">
 
                 <Button
-                    android:id="@+id/confirm"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/phone"
-                    android:text="Confirm"
-                    android:fontFamily="@font/g_light"
-                    android:layout_marginBottom="5sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="5dp"
-                    android:textColor="@color/black"/>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearlayout_8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@+id/linearlayout_7"
-                android:layout_marginTop="5dp">
-
-                <Button
+                    android:background="@drawable/button"
                     android:id="@+id/logout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Logout"
                     android:fontFamily="@font/g_light"
                     android:onClick="logoutUser"
-                    android:layout_marginBottom="5sp"
+                    android:layout_marginBottom="10sp"
                     android:textStyle="bold"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/white"/>
 
 
             </LinearLayout>

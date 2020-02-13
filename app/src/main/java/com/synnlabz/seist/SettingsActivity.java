@@ -37,17 +37,21 @@ import java.util.Map;
 public class SettingsActivity extends AppCompatActivity {
 
     private EditText mPhoneField;
+    private EditText mFacultyField;
+    private EditText mBioField;
+    private EditText mAgeField;
+    private EditText mYearField;
 
     private TextView mNameField;
 
-    private Button mBack, mConfirm;
+    private Button mConfirm;
 
     private ImageView mProfileImage;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mUserDatabase;
 
-    private String userId, name, phone, profileImageUrl, userSex;
+    private String userId, name, phone, profileImageUrl , faculty , bio , age , year ,userSex;
 
     private Uri resultUri;
 
@@ -57,11 +61,15 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         mNameField = (TextView) findViewById(R.id.name);
+
         mPhoneField = (EditText) findViewById(R.id.phone);
+        mFacultyField = (EditText) findViewById(R.id.faculty);
+        mBioField = (EditText) findViewById(R.id.bio);
+        mAgeField = (EditText) findViewById(R.id.age);
+        mYearField = (EditText) findViewById(R.id.year);
 
         mProfileImage = (ImageView) findViewById(R.id.profileImage);
 
-        mBack = (Button) findViewById(R.id.back);
         mConfirm = (Button) findViewById(R.id.confirm);
 
         mAuth = FirebaseAuth.getInstance();
@@ -85,13 +93,6 @@ public class SettingsActivity extends AppCompatActivity {
                 saveUserInformation();
             }
         });
-        mBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-                return;
-            }
-        });
     }
 
 
@@ -108,6 +109,22 @@ public class SettingsActivity extends AppCompatActivity {
                     if(map.get("phone")!=null){
                         phone = map.get("phone").toString();
                         mPhoneField.setText(phone);
+                    }
+                    if(map.get("faculty")!=null){
+                        faculty = map.get("faculty").toString();
+                        mFacultyField.setText(faculty);
+                    }
+                    if(map.get("year")!=null){
+                        year = map.get("year").toString();
+                        mYearField.setText(year);
+                    }
+                    if(map.get("bio")!=null){
+                        bio = map.get("bio").toString();
+                        mBioField.setText(bio);
+                    }
+                    if(map.get("age")!=null){
+                        age = map.get("age").toString();
+                        mAgeField.setText(age);
                     }
                     if(map.get("sex")!=null){
                         userSex = map.get("sex").toString();
@@ -138,10 +155,18 @@ public class SettingsActivity extends AppCompatActivity {
     private void saveUserInformation() {
         name = mNameField.getText().toString();
         phone = mPhoneField.getText().toString();
+        faculty = mFacultyField.getText().toString();
+        year = mYearField.getText().toString();
+        age = mAgeField.getText().toString();
+        bio = mBioField.getText().toString();
 
         Map userInfo = new HashMap();
         userInfo.put("name", name);
         userInfo.put("phone", phone);
+        userInfo.put("faculty", faculty);
+        userInfo.put("year", year);
+        userInfo.put("age", age);
+        userInfo.put("bio", bio);
         mUserDatabase.updateChildren(userInfo);
         if(resultUri != null){
             final StorageReference filepath = FirebaseStorage.getInstance().getReference().child("profileImages").child(userId);
