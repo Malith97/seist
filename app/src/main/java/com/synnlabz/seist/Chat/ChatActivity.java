@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,9 +34,11 @@ public class ChatActivity extends AppCompatActivity {
 
     private EditText mSendEditText;
 
+    private TextView mChatName;
+
     private Button mSendButton;
 
-    private String currentUserID, matchId, chatId;
+    private String currentUserID, matchId, chatId , currentUserName;
 
     DatabaseReference mDatabaseUser, mDatabaseChat;
     @Override
@@ -145,6 +148,8 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
 
     private ArrayList<ChatObject> resultsChat = new ArrayList<ChatObject>();

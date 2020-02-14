@@ -22,7 +22,7 @@
         app:tabTextColor="@android:color/white"
         android:weightSum="3">
 
-        <Button
+        <ImageButton
             android:id="@+id/tabChats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,9 +31,11 @@
             android:fontFamily="@font/g_light"
             android:layout_weight="1"
             android:onClick="goToMatches"
-            android:background="@color/lightred"/>
+            android:background="@color/lightred"
+            android:src="@drawable/ic_match"
+            android:layout_marginBottom="10dp"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/tabStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,9 +44,11 @@
             android:text="Home"
             android:onClick="goToHome"
             android:layout_weight="1"
-            android:background="@color/lightred"/>
+            android:background="@color/lightred"
+            android:src="@drawable/ic_home"
+            android:layout_marginBottom="10dp"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/tabCalls"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +57,9 @@
             android:text="Profile"
             android:layout_weight="1"
             android:onClick="goToSettings"
-            android:background="@color/lightred"/>
+            android:background="@color/lightred"
+            android:src="@drawable/ic_person"
+            android:layout_marginBottom="10dp"/>
 
     </LinearLayout>
 

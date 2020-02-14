@@ -21,8 +21,8 @@
         android:id="@+id/cardView">
         <LinearLayout
             android:layout_gravity="center"
-            android:layout_width="300dp"
-            android:layout_height="350dp"
+            android:layout_width="350dp"
+            android:layout_height="385dp"
             android:orientation="vertical">
 
             <ImageView
@@ -34,13 +34,24 @@
             <TextView
                 android:id="@+id/name"
                 android:textSize="30sp"
-                android:paddingLeft="20sp"
+                android:paddingLeft="28sp"
                 android:textColor="@android:color/black"
                 android:gravity="center|left"
                 android:fontFamily="@font/g_light"
                 tools:text="hello"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/faculty"
+                android:textSize="18sp"
+                android:paddingLeft="35sp"
+                android:textColor="@android:color/black"
+                android:gravity="center|left"
+                android:fontFamily="@font/g_light"
+                tools:text="hello"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"  />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

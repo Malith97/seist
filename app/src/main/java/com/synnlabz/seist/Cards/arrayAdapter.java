@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.synnlabz.seist.R;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class arrayAdapter extends ArrayAdapter<cards>{
@@ -31,6 +33,7 @@ public class arrayAdapter extends ArrayAdapter<cards>{
         ImageView image = (ImageView) convertView.findViewById(R.id.image);
 
         name.setText(card_item.getName());
+
         switch(card_item.getProfileImageUrl()){
             case "default":
                 Glide.with(convertView.getContext()).load(R.mipmap.ic_launcher).into(image);

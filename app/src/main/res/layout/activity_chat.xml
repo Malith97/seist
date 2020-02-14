@@ -14,14 +14,14 @@
         android:background="@color/lightred"
         android:minHeight="?attr/actionBarSize">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:onClick="backToMatches"
-            android:background="@color/lightred"
+            android:background="@drawable/btn_arrow"
             android:fontFamily="@font/g_light"
             android:textColor="@color/white"
-            android:text="back"/>
+            android:src="@drawable/ic_arrow"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImage"
@@ -31,19 +31,21 @@
             android:layout_marginLeft="20sp"/>
 
         <TextView
+            android:id="@+id/ChatName"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Name"
             android:fontFamily="@font/g_light"
             android:textColor="@color/white"
-            android:layout_marginLeft="25sp"/>
+            android:layout_marginLeft="10sp"/>
 
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar">
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="50sp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"

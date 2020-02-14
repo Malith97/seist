@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.synnlabz.seist.R;
 
 public class ChatViewHolders extends RecyclerView.ViewHolder implements View.OnClickListener{
-    public TextView mMessage;
+    public TextView mMessage,mChatName;
     public LinearLayout mContainer;
     public ChatViewHolders(View itemView) {
         super(itemView);
@@ -17,6 +17,8 @@ public class ChatViewHolders extends RecyclerView.ViewHolder implements View.OnC
 
         mMessage = itemView.findViewById(R.id.message);
         mContainer = itemView.findViewById(R.id.container);
+
+        mChatName = (TextView) itemView.findViewById(R.id.ChatName);
     }
 
     @Override
