@@ -1,114 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:padding="20sp">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/lightred"
-        android:minHeight="?attr/actionBarSize" />
-
-    <LinearLayout
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/lightred"
-        app:tabSelectedTextColor="@android:color/white"
-        app:tabTextColor="@android:color/white"
-        android:weightSum="3">
-
-        <ImageButton
-            android:id="@+id/tabChats"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chats"
-            android:textColor="@color/white"
-            android:fontFamily="@font/g_light"
-            android:layout_weight="1"
-            android:onClick="goToMatches"
-            android:background="@color/lightred"
-            android:src="@drawable/ic_match"
-            android:layout_marginBottom="10dp"/>
-
-        <ImageButton
-            android:id="@+id/tabStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:fontFamily="@font/g_light"
-            android:text="Home"
-            android:onClick="goToHome"
-            android:layout_weight="1"
-            android:background="@color/lightred"
-            android:src="@drawable/ic_home"
-            android:layout_marginBottom="10dp"/>
-
-        <ImageButton
-            android:id="@+id/tabCalls"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:fontFamily="@font/g_light"
-            android:text="Profile"
-            android:layout_weight="1"
-            android:onClick="goToSettings"
-            android:background="@color/lightred"
-            android:src="@drawable/ic_person"
-            android:layout_marginBottom="10dp"/>
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/MatchImage"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:src="@mipmap/ic_launcher"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:paddingLeft="20sp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/MatchName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="20sp"
+            android:text="Matches Name"
+            android:gravity="center"/>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/MatchImage"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:src="@drawable/default_user"
-                android:layout_margin="20dp"/>
+        <TextView
+            android:id="@+id/Matchid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Matches ID"
+            android:gravity="center"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:paddingLeft="20sp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="10sp"
-                    android:paddingTop="30dp"
-                    android:paddingLeft="100sp"
-                    android:fontFamily="@font/g_light"
-                    android:text="Name"
-                    android:id="@+id/MatchName"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="20sp"
-                    android:paddingLeft="100sp"
-                    android:fontFamily="@font/g_light"
-                    android:text="ID"
-                    android:id="@+id/Matchid"/>
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
     </LinearLayout>
+
 
 </LinearLayout>

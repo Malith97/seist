@@ -10,13 +10,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.seist.R;
-import com.lorentzos.flingswipe.SwipeFlingAdapterView;
 
 import java.util.List;
 
 public class arrayAdapter extends ArrayAdapter<cards>{
-
-    //SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
     Context context;
 

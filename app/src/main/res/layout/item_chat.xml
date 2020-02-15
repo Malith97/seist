@@ -7,12 +7,10 @@
         android:layout_height="wrap_content"
         android:padding="20sp"
         android:id="@+id/container">
-
         <TextView
             android:paddingBottom="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/g_light"
             android:text="Text"
             android:id="@+id/message"/>
 

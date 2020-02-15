@@ -5,47 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.synnlabz.seist.Chat.ChatActivity">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/lightred"
-        android:minHeight="?attr/actionBarSize">
-
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:onClick="backToMatches"
-            android:background="@drawable/btn_arrow"
-            android:fontFamily="@font/g_light"
-            android:textColor="@color/white"
-            android:src="@drawable/ic_arrow"/>
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profileImage"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/default_user"
-            android:layout_marginLeft="20sp"/>
-
-        <TextView
-            android:id="@+id/ChatName"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Name"
-            android:fontFamily="@font/g_light"
-            android:textColor="@color/white"
-            android:layout_marginLeft="10sp"/>
-
-    </androidx.appcompat.widget.Toolbar>
+    tools:context=".Chat.ChatActivity">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_marginBottom="50sp">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sendLayout">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -67,7 +32,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="message..."
-            android:fontFamily="@font/g_light"
             android:id="@+id/message"
             />
         <Button
@@ -75,7 +39,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Send"
-            android:fontFamily="@font/g_light"
             android:id="@+id/send"/>
     </LinearLayout>
 

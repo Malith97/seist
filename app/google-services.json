@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "995896509805",
-    "firebase_url": "https://seist-f653e.firebaseio.com",
-    "project_id": "seist-f653e",
-    "storage_bucket": "seist-f653e.appspot.com"
+    "project_number": "765319331355",
+    "firebase_url": "https://seist-f85f0.firebaseio.com",
+    "project_id": "seist-f85f0",
+    "storage_bucket": "seist-f85f0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:995896509805:android:afb4a91e334adf7e284664",
+        "mobilesdk_app_id": "1:765319331355:android:7bea0bcce9e9df3c3382be",
         "android_client_info": {
-          "package_name": "com.synnlabz.seist"
+          "package_name": "com.example.seist"
         }
       },
       "oauth_client": [
         {
-          "client_id": "995896509805-p4l84m1pgq8pmko0m8rfnp12gpnl6581.apps.googleusercontent.com",
+          "client_id": "765319331355-prnjk21bdncm04j920lcbf295vv4tvik.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.synnlabz.seist",
+            "package_name": "com.example.seist",
             "certificate_hash": "aace340665eef65cc8bab718a4db05d6af392510"
           }
         },
         {
-          "client_id": "995896509805-fsm2mvf0t3rcpmbpsu604f52g52psc8k.apps.googleusercontent.com",
+          "client_id": "765319331355-h7afdsud0pt08gu0m20oiog5r5i605i7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDTAzGinZBttUP07V_BQXUCgTWH-XXkREk"
+          "current_key": "AIzaSyAXaYu7v6x1C93pEgaEKeGPv1HfDdvMkR8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "995896509805-fsm2mvf0t3rcpmbpsu604f52g52psc8k.apps.googleusercontent.com",
+              "client_id": "765319331355-h7afdsud0pt08gu0m20oiog5r5i605i7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -133,47 +133,24 @@ public class MainActivity extends AppCompatActivity {
     public void checkUserSex(){
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         DatabaseReference userDb = usersDb.child(user.getUid());
-        userDb.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()){
-                    if (dataSnapshot.child("sex").getValue() != null){
-                        userSex = dataSnapshot.child("sex").getValue().toString();
-                        switch (userSex){
-                            case "Male":
-                                oppositeUserSex = "Female";
-                                break;
-                            case "Female":
-                                oppositeUserSex = "Male";
-                                break;
-                        }
-                        getOppositeSexUsers();
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-    }
-
-    public void getOppositeSexUsers(){
-        usersDb.addChildEventListener(new ChildEventListener() {
+        userDb.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-                if (dataSnapshot.child("sex").getValue() != null){          //Check Here IF
-                    if (dataSnapshot.exists() && !dataSnapshot.child("connections").child("nope").hasChild(currentUId) && !dataSnapshot.child("connections").child("yep").hasChild(currentUId) && dataSnapshot.child("sex").getValue().toString().equals(oppositeUserSex)) {
-                        String profileImageUrl = "default";
-                        if (!dataSnapshot.child("profileImageUrl").getValue().equals("default")) {
-                            profileImageUrl = dataSnapshot.child("profileImageUrl").getValue().toString();
+                if(dataSnapshot.getKey().equals(user.getUid())){
+                    if (dataSnapshot.exists()){
+                        if (dataSnapshot.child("sex") != null){
+                            userSex = dataSnapshot.child("sex").getValue().toString();
+                            oppositeUserSex = "Female";
+                            switch (userSex){
+                                case "Male":
+                                    oppositeUserSex = "Female";
+                                    break;
+                                case "Female":
+                                    oppositeUserSex = "Male";
+                                    break;
+                            }
+                            getOppositeSexUsers();
                         }
-                        cards item = new cards(dataSnapshot.getKey(), dataSnapshot.child("name").getValue().toString(), profileImageUrl);
-                        rowItems.add(item);
-                        arrayAdapter.notifyDataSetChanged();
                     }
                 }
             }
@@ -196,6 +173,38 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+    }
+
+    public void getOppositeSexUsers(){
+        usersDb.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                if (dataSnapshot.child("sex").getValue() != null) {
+                    if (dataSnapshot.exists() && !dataSnapshot.child("connections").child("nope").hasChild(currentUId) && !dataSnapshot.child("connections").child("yep").hasChild(currentUId) && dataSnapshot.child("sex").getValue().toString().equals(oppositeUserSex)) {
+                        String profileImageUrl = "default";
+                        if (dataSnapshot.child("profileImageUrl").getValue().equals("default")) { //put ! and changed childevent
+                            profileImageUrl = dataSnapshot.child("profileImageUrl").getValue().toString();
+                        }
+                        cards item = new cards(dataSnapshot.getKey(), dataSnapshot.child("name").getValue().toString(), profileImageUrl);
+                        rowItems.add(item);
+                        arrayAdapter.notifyDataSetChanged();
+                    }
+                }
+            }
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+            }
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
             }
         });
     }

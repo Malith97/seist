@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.synnlabz.seist.ChooseLoginRegistrationActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ChooseLoginRegistrationActivity">
+
     <Button
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="login"
-        android:id="@+id/login"/>
+        android:text="Login"/>
+
     <Button
+        android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="register"
-        android:id="@+id/register"/>
+        android:text="register"/>
 
 </LinearLayout>

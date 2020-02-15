@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.synnlabz.seist">
+    package="com.example.seist">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -11,18 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.synnlabz.seist.MainActivity" />
-        <activity android:name="com.synnlabz.seist.LoginActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ChooseLoginRegistrationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.synnlabz.seist.RegistrationActivity" />
-        <activity android:name="com.synnlabz.seist.SettingsActivity" />
-        <activity android:name="com.synnlabz.seist.Matches.MatchesActivity" />
-        <activity android:name="com.synnlabz.seist.Chat.ChatActivity"></activity>
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".Matches.MatchesActivity" />
+        <activity android:name=".Chat.ChatActivity"></activity>
     </application>
 
 </manifest>

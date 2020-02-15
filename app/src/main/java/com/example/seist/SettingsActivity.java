@@ -60,7 +60,6 @@ public class SettingsActivity extends AppCompatActivity {
 
         mFaculty = (EditText) findViewById(R.id.faculty);
         mYear = (EditText) findViewById(R.id.year);
-        mAge = (EditText) findViewById(R.id.age);
 
         mProfileImage = (ImageView) findViewById(R.id.profileImage);
 
@@ -126,11 +125,6 @@ public class SettingsActivity extends AppCompatActivity {
                         mYear.setText(year);
                     }
 
-                    if (map.get("age") != null){
-                        age = map.get("age").toString();
-                        mAge.setText(age);
-                    }
-
                     if (map.get("sex") != null){
                         userSex = map.get("sex").toString();
                     }
@@ -162,7 +156,6 @@ public class SettingsActivity extends AppCompatActivity {
         phone = mPhoneField.getText().toString();
         faculty = mFaculty.getText().toString();
         year = mYear.getText().toString();
-        age = mAge.getText().toString();
 
         Map userInfo = new HashMap();
 
@@ -170,7 +163,6 @@ public class SettingsActivity extends AppCompatActivity {
         userInfo.put("phone",phone);
         userInfo.put("faculty",faculty);
         userInfo.put("year",year);
-        userInfo.put("age",age);
 
         mUserDatabase.updateChildren(userInfo);
 
