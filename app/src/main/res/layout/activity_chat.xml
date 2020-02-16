@@ -1,45 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Chat.ChatActivity">
+    android:background="#e6e6e6"
+    tools:context="com.synnlabz.seist.Chat.ChatActivity">
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/sendLayout">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/recyclerView"
-            android:scrollbars="vertical">
-        </androidx.recyclerview.widget.RecyclerView>
-
-    </androidx.core.widget.NestedScrollView>
-
-    <LinearLayout
-        android:id="@+id/sendLayout"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/lightred"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="backToMatches"
+            android:background="@drawable/btn_arrow"
+            android:fontFamily="@font/g_light"
+            android:textColor="@color/white"
+            android:src="@drawable/ic_arrow"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/default_user"
+            android:layout_marginLeft="20sp"/>
+
+        <TextView
+            android:id="@+id/ChatName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Name"
+            android:fontFamily="@font/g_light"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/bottom"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:id="@+id/bottom"
+        android:background="#fff"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
+
         <EditText
-            android:layout_weight="0.8"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="message..."
             android:id="@+id/message"
-            />
-        <Button
-            android:layout_weight="0.2"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Send"
-            android:id="@+id/send"/>
-    </LinearLayout>
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/g_light"
+            android:hint="Type a message..."
+            android:layout_toLeftOf="@id/send"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton
+            android:id="@+id/send"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_arrow"
+            android:src="@drawable/ic_send"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -6,6 +6,8 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,10 +28,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolders>{
     @Override
     public ChatViewHolders onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chat, null, false);
+        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.chat_item_sent, null, false);
         RecyclerView.LayoutParams lp = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         layoutView.setLayoutParams(lp);
         ChatViewHolders rcv = new ChatViewHolders(layoutView);
+
 
         return rcv;
     }
@@ -38,13 +41,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolders>{
     public void onBindViewHolder(ChatViewHolders holder, int position) {
         holder.mMessage.setText(chatList.get(position).getMessage());
         if(chatList.get(position).getCurrentUser()){
-            holder.mMessage.setGravity(Gravity.END);   //sender //me
-            holder.mMessage.setTextColor(Color.parseColor("#404040"));
-            holder.mContainer.setBackgroundResource(R.drawable.background_right);
+            holder.mLinear.setGravity(Gravity.END);   //sender //me
+            holder.mLinear.setPadding(85,0,0,0);
+            holder.mContainer.setBackgroundColor(Color.parseColor("#ff7979"));
+            holder.mMessage.setTextColor(Color.parseColor("#ffffff"));
+            //holder.mContainer.setBackgroundResource(R.drawable.background_right);
         }else{
-            holder.mMessage.setGravity(Gravity.START);  //receiver
-            holder.mMessage.setTextColor(Color.parseColor("#FFFFFF"));
-            holder.mContainer.setBackgroundResource(R.drawable.background_left);
+            holder.mLinear.setGravity(Gravity.START);       //receiver
+            holder.mLinear.setPadding(0,0,85,0);
+            holder.mMessage.setTextColor(Color.parseColor("#000000"));
+            holder.mContainer.setBackgroundColor(Color.parseColor("#ffffff"));
         }
 
     }

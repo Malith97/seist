@@ -1,5 +1,6 @@
 package com.synnlabz.seist;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private cards cards_data[];
     private com.synnlabz.seist.Cards.arrayAdapter arrayAdapter;
     private int i;
+
+    private Context mContext = MainActivity.this;
 
     private FirebaseAuth mAuth;
 

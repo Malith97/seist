@@ -34,6 +34,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import pl.bclogic.pulsator4droid.library.PulsatorLayout;
+
 public class SettingsActivity extends AppCompatActivity {
 
     private EditText mPhoneField;
@@ -59,6 +61,9 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        PulsatorLayout pulsator = (PulsatorLayout) findViewById(R.id.pulsator);
+        pulsator.start();
 
         mNameField = (TextView) findViewById(R.id.name);
 

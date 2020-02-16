@@ -4,16 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Matches.MatchesActivity">
+    tools:context="com.synnlabz.seist.Matches.MatchesActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightred"
+        android:minHeight="?attr/actionBarSize" />
+
+    <LinearLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightred"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@android:color/white"
+        android:weightSum="3">
+
+        <ImageButton
+            android:id="@+id/tabChats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chats"
+            android:fontFamily="@font/g_light"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="goToMatches"
+            android:background="@color/lightred"
+            android:src="@drawable/ic_match"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageButton
+            android:id="@+id/tabStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Home"
+            android:fontFamily="@font/g_light"
+            android:onClick="goToHome"
+            android:layout_weight="1"
+            android:background="@color/lightred"
+            android:src="@drawable/ic_home"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageButton
+            android:id="@+id/tabCalls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Profile"
+            android:fontFamily="@font/g_light"
+            android:layout_weight="1"
+            android:background="@color/lightred"
+            android:src="@drawable/ic_person"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/recyclerView"
             android:scrollbars="vertical">
         </androidx.recyclerview.widget.RecyclerView>
 

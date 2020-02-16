@@ -115,4 +115,9 @@ public class MatchesActivity extends AppCompatActivity {
         return;
     }
 
+    public void goToMatches(View view) {
+        Intent intent = new Intent(MatchesActivity.this, MatchesActivity.class);
+        startActivity(intent);
+        return;
+    }
 }
