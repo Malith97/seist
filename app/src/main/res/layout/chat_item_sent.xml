@@ -28,7 +28,7 @@
                 android:id="@+id/message"
                 tools:text="My of the doer."
                 android:textSize="@dimen/default_message_text_size"
-                android:fontFamily="@font/g_light"
+                android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/default_message_color_send"
                 android:gravity="center_vertical|start"
                 android:layout_width="wrap_content"

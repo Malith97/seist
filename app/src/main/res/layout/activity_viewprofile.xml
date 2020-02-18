@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    tools:context="com.synnlabz.seist.Chat.viewprofile">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightred"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="backToChat"
+            android:background="@drawable/btn_arrow"
+            android:fontFamily="@font/g_light"
+            android:textColor="@color/white"
+            android:src="@drawable/ic_arrow"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rel_lay_5"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.synnlabz.seist.MainActivity">
+
+        <RelativeLayout
+            android:id="@+id/rel_lay_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                android:id="@+id/pulsator"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+
+                app:pulse_count="4"
+                app:pulse_duration="5000"
+                app:pulse_repeat="0"
+                app:pulse_color="@color/lightred"
+                app:pulse_startFromScratch="false"
+                app:pulse_interpolator="Linear">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/profileImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/default_user"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"/>
+
+            </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:fontFamily="@font/g_light"
+            android:textSize="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_below="@+id/rel_lay_3"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_phone_black_24dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone"
+                android:fontFamily="@font/g_light"
+                android:layout_marginBottom="20sp"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="20sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/linearlayout_1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_faculty"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/faculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone"
+                android:hint="Faculty"
+                android:fontFamily="@font/g_light"
+                android:layout_marginBottom="20sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="20sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/linearlayout_2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_age"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone"
+                android:hint="Age"
+                android:maxLength="3"
+                android:fontFamily="@font/g_light"
+                android:layout_marginBottom="20sp"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="20sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/linearlayout_3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_year"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone"
+                android:hint="Academic Year"
+                android:maxLength="2"
+                android:fontFamily="@font/g_light"
+                android:layout_marginBottom="20sp"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="20sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/linearlayout_4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_bio"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone"
+                android:hint="About Me"
+                android:fontFamily="@font/g_light"
+                android:layout_marginBottom="20sp"
+                android:inputType="text"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="20sp"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

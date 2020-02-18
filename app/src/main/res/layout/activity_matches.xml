@@ -55,6 +55,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:text="Profile"
+            android:onClick="goToSettings"
             android:fontFamily="@font/g_light"
             android:layout_weight="1"
             android:background="@color/lightred"

@@ -35,6 +35,7 @@
                     android:paddingBottom="10sp"
                     android:paddingTop="30dp"
                     android:paddingLeft="100sp"
+                    android:fontFamily="@font/lato_regular"
                     android:text="Name"
                     android:id="@+id/MatchName"/>
 

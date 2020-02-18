@@ -4,11 +4,16 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.synnlabz.seist.R;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -36,6 +41,7 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesViewHolders>{
     public void onBindViewHolder(MatchesViewHolders holder, int position) {
         holder.mMatchId.setText(matchesList.get(position).getUserId());
         holder.mMatchName.setText(matchesList.get(position).getName());
+
         if(!matchesList.get(position).getProfileImageUrl().equals("default")){
             Glide.with(context).load(matchesList.get(position).getProfileImageUrl()).into(holder.mMatchImage);
         }
@@ -45,4 +51,6 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesViewHolders>{
     public int getItemCount() {
         return this.matchesList.size();
     }
+
+    //if anything wrong delete these code lines
 }

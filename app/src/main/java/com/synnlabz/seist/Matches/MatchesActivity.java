@@ -14,6 +14,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.synnlabz.seist.Chat.ChatActivity;
 import com.synnlabz.seist.MainActivity;
 import com.synnlabz.seist.R;
 import com.synnlabz.seist.SettingsActivity;
@@ -44,7 +45,6 @@ public class MatchesActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mMatchesAdapter);
 
         getUserMatchId();
-
     }
 
     private void getUserMatchId() {

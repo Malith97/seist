@@ -1,6 +1,7 @@
 package com.synnlabz.seist.Chat;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -33,11 +34,11 @@ public class ChatActivity extends AppCompatActivity {
 
     private EditText mSendEditText;
 
-    private TextView mChatName;
+    private TextView mUserName;
 
     private ImageButton mSendButton;
 
-    private String currentUserID, matchId, chatId , currentUserName;
+    private String currentUserID, matchId, matchName, chatId;
 
     DatabaseReference mDatabaseUser, mDatabaseChat;
     @Override
@@ -46,6 +47,9 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         matchId = getIntent().getExtras().getString("matchId");
+        matchName = getIntent().getExtras().getString("matchName");
+        TextView user_name = findViewById(R.id.username);
+        user_name.setText(matchName);
 
         currentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
@@ -61,6 +65,8 @@ public class ChatActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mChatLayoutManager);
         mChatAdapter = new ChatAdapter(getDataSetChat(), ChatActivity.this);
         mRecyclerView.setAdapter(mChatAdapter);
+
+        //This 4 lines
 
         mSendEditText = findViewById(R.id.message);
         mSendButton = findViewById(R.id.send);
@@ -159,6 +165,12 @@ public class ChatActivity extends AppCompatActivity {
 
     public void backToMatches(View view) {
         Intent intent = new Intent(ChatActivity.this, MatchesActivity.class);
+        startActivity(intent);
+        return;
+    }
+
+    public void ViewProfile(View view) {
+        Intent intent = new Intent(ChatActivity.this, viewprofile.class);
         startActivity(intent);
         return;
     }
