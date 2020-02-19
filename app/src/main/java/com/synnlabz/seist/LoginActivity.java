@@ -98,4 +98,8 @@ public class LoginActivity extends AppCompatActivity {
     public void OpenRegister(View view) {
         startActivity(new Intent(LoginActivity.this,RegistrationActivity.class));
     }
+
+    public void goToForgot(View view) {
+        startActivity(new Intent(LoginActivity.this,ResetPassword.class));
+    }
 }

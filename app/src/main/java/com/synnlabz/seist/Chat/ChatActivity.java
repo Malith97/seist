@@ -1,7 +1,6 @@
 package com.synnlabz.seist.Chat;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -36,7 +35,7 @@ public class ChatActivity extends AppCompatActivity {
 
     private TextView mUserName;
 
-    private ImageButton mSendButton;
+    private ImageButton mSendButton , mDetails;
 
     private String currentUserID, matchId, matchName, chatId;
 
@@ -164,13 +163,11 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     public void backToMatches(View view) {
-        Intent intent = new Intent(ChatActivity.this, MatchesActivity.class);
-        startActivity(intent);
-        return;
+        finish();
     }
 
     public void ViewProfile(View view) {
-        Intent intent = new Intent(ChatActivity.this, viewprofile.class);
+        Intent intent = new Intent(ChatActivity.this, Viewprofile.class);
         startActivity(intent);
         return;
     }

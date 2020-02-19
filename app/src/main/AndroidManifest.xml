@@ -18,7 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Chat.viewprofile"></activity>
+        <activity android:name=".ResetPassword"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
@@ -31,6 +31,7 @@
         <activity android:name=".SettingsActivity" />
         <activity android:name=".Matches.MatchesActivity" />
         <activity android:name=".Chat.ChatActivity" />
+        <activity android:name=".Chat.Viewprofile" />
     </application>
 
 </manifest>
