@@ -31,7 +31,7 @@
         <activity android:name=".SettingsActivity" />
         <activity android:name=".Matches.MatchesActivity" />
         <activity android:name=".Chat.ChatActivity" />
-        <activity android:name=".Chat.Viewprofile" />
+        <activity android:name=".Profile.Viewprofile" />
     </application>
 
 </manifest>

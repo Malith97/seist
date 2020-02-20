@@ -338,14 +338,7 @@
 
 
             </LinearLayout>
-
-
-
-
-
-
-
-        </RelativeLayout>
+         </RelativeLayout>
     </ScrollView>
 
 </LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e6e6e6"
-    tools:context="com.synnlabz.seist.Chat.Viewprofile">
+    tools:context="com.synnlabz.seist.Profile.Viewprofile">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -59,7 +59,7 @@
                         app:pulse_count="4"
                         app:pulse_duration="5000"
                         app:pulse_repeat="0"
-                        app:pulse_color="@color/lightred"
+                        app:pulse_color="@color/white"
                         app:pulse_startFromScratch="false"
                         app:pulse_interpolator="Linear">
 
@@ -75,6 +75,7 @@
                     </pl.bclogic.pulsator4droid.library.PulsatorLayout>
 
                     <TextView
+                        android:id="@+id/name"
                         android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -85,6 +86,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/bio"
                         android:layout_marginTop="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -118,6 +120,7 @@
                                 android:textSize="20sp"
                                 />
                             <TextView
+                                android:id="@+id/age"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="23"
@@ -162,6 +165,7 @@
                                 android:textSize="20sp"
                                 />
                             <TextView
+                                android:id="@+id/year"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="3"
@@ -225,6 +229,7 @@
                         android:layout_height="36dp"
                         android:src="@drawable/ic_phone_black_24dp"/>
                     <TextView
+                        android:id="@+id/phone"
                         android:textStyle="bold"
                         android:layout_gravity="center_vertical"
                         android:layout_width="wrap_content"
@@ -243,6 +248,7 @@
                         android:layout_height="36dp"
                         android:src="@drawable/ic_faculty"/>
                     <TextView
+                        android:id="@+id/faculty"
                         android:textStyle="bold"
                         android:layout_gravity="center_vertical"
                         android:layout_width="wrap_content"

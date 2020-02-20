@@ -24,6 +24,13 @@
             android:textColor="@color/white"
             android:src="@drawable/ic_arrow"/>
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImagechat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/default_user">
+        </de.hdodenhof.circleimageview.CircleImageView>
+
         <TextView
             android:id="@+id/username"
             android:layout_width="wrap_content"

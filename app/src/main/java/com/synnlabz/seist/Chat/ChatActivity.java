@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -18,7 +20,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.synnlabz.seist.Matches.MatchesActivity;
+import com.synnlabz.seist.Profile.Viewprofile;
 import com.synnlabz.seist.R;
 
 import java.util.ArrayList;
@@ -34,28 +36,30 @@ public class ChatActivity extends AppCompatActivity {
     private EditText mSendEditText;
 
     private TextView mUserName;
+    private ImageView mProfileImage;
 
     private ImageButton mSendButton , mDetails;
 
-    private String currentUserID, matchId, matchName, chatId;
+    private String currentUserID, profileImageUrl, matchId, matchName, chatId;
 
-    DatabaseReference mDatabaseUser, mDatabaseChat;
+    DatabaseReference mDatabaseOp, mDatabaseUser, mDatabaseChat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
         matchId = getIntent().getExtras().getString("matchId");
-        matchName = getIntent().getExtras().getString("matchName");
-        TextView user_name = findViewById(R.id.username);
-        user_name.setText(matchName);
+        mUserName = findViewById(R.id.username);
+        mProfileImage = (ImageView) findViewById(R.id.profileImagechat);
 
         currentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         mDatabaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentUserID).child("connections").child("matches").child(matchId).child("ChatId");
         mDatabaseChat = FirebaseDatabase.getInstance().getReference().child("Chat");
+        mDatabaseOp = FirebaseDatabase.getInstance().getReference().child("Users").child(matchId);
 
         getChatId();
+        getChatOp();
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mRecyclerView.setNestedScrollingEnabled(false);
@@ -101,6 +105,38 @@ public class ChatActivity extends AppCompatActivity {
                     chatId = dataSnapshot.getValue().toString();
                     mDatabaseChat = mDatabaseChat.child(chatId);
                     getChatMessages();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    private void getChatOp(){
+        mDatabaseOp.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists() && dataSnapshot.getChildrenCount()>0){
+                    Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
+                    if(map.get("name")!=null){
+                        String name = map.get("name").toString();
+                        mUserName.setText(name);
+                    }
+                    Glide.clear(mProfileImage);
+                    if(map.get("profileImageUrl")!=null){
+                        profileImageUrl = map.get("profileImageUrl").toString();
+                        switch(profileImageUrl){
+                            case "default":
+                                Glide.with(getApplication()).load(R.mipmap.ic_launcher).into(mProfileImage);
+                                break;
+                            default:
+                                Glide.with(getApplication()).load(profileImageUrl).into(mProfileImage);
+                                break;
+                        }
+                    }
                 }
             }
 
@@ -168,6 +204,9 @@ public class ChatActivity extends AppCompatActivity {
 
     public void ViewProfile(View view) {
         Intent intent = new Intent(ChatActivity.this, Viewprofile.class);
+        Bundle b = new Bundle();
+        b.putString("matchId", matchId);
+        intent.putExtras(b);
         startActivity(intent);
         return;
     }
