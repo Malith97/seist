@@ -47,6 +47,7 @@ dependencies {
     implementation 'com.github.timigod:android-chat-ui:v0.1.4'
 
     implementation 'pl.bclogic:pulsator4droid:1.0.3'
+    implementation 'com.android.support:design:25.0.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -30,14 +30,14 @@ import pl.bclogic.pulsator4droid.library.PulsatorLayout;
 
 public class Viewprofile extends AppCompatActivity {
 
-    private TextView mPhoneField , mFacultyField , mBioField , mAgeField , mYearField , mNameField;
+    private TextView mFacultyField , mBioField , mAgeField , mYearField , mNameField , mDegreeField;
 
     private ImageView mProfileImage;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mUserDatabase;
 
-    private String userId, matchId, name, phone, profileImageUrl , faculty , bio , age , year , userSex;
+    private String userId, matchId, name, profileImageUrl , faculty , bio , age , year ,degree , userSex;
 
     private Uri resultUri;
 
@@ -51,10 +51,10 @@ public class Viewprofile extends AppCompatActivity {
         pulsator.start();
 
         mNameField = (TextView) findViewById(R.id.name);
-        mPhoneField = (TextView) findViewById(R.id.phone);
         mFacultyField = (TextView) findViewById(R.id.faculty);
         mBioField = (TextView) findViewById(R.id.bio);
         mAgeField = (TextView) findViewById(R.id.age);
+        mDegreeField = (TextView) findViewById(R.id.degree);
         mYearField = (TextView) findViewById(R.id.year);
         mProfileImage = (ImageView) findViewById(R.id.profileImage);
 
@@ -85,10 +85,6 @@ public class Viewprofile extends AppCompatActivity {
                         name = map.get("name").toString();
                         mNameField.setText(name);
                     }
-                    if(map.get("phone")!=null){
-                        phone = map.get("phone").toString();
-                        mPhoneField.setText(phone);
-                    }
                     if(map.get("faculty")!=null){
                         faculty = map.get("faculty").toString();
                         mFacultyField.setText(faculty);
@@ -104,6 +100,10 @@ public class Viewprofile extends AppCompatActivity {
                     if(map.get("age")!=null){
                         age = map.get("age").toString();
                         mAgeField.setText(age);
+                    }
+                    if(map.get("degree")!=null){
+                        degree = map.get("degree").toString();
+                        mDegreeField.setText(degree);
                     }
                     if(map.get("sex")!=null){
                         userSex = map.get("sex").toString();

@@ -186,75 +186,58 @@
                 android:orientation="vertical"
                 android:layout_gravity="center">
                 <LinearLayout
-                    android:layout_marginTop="25dp"
-                    android:paddingLeft="35dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@drawable/ic_year"/>
-                    <TextView
-                        android:textStyle="bold"
-                        android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="20sp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="20sp"
+                            android:backgroundTint="@color/black"
+                            android:src="@drawable/ic_faculty"
+                            android:layout_marginRight="20sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:text="3rd Year"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginTop="25dp"
-                    android:paddingLeft="35dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@drawable/ic_age"/>
-                    <TextView
-                        android:textStyle="bold"
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:text="23 Years Old"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginTop="25dp"
-                    android:paddingLeft="35dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@drawable/ic_phone_black_24dp"/>
-                    <TextView
-                        android:id="@+id/phone"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:text="077 255 3265"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginTop="25dp"
-                    android:paddingLeft="35dp"
-                    android:layout_marginBottom="40dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@drawable/ic_faculty"/>
-                    <TextView
-                        android:id="@+id/faculty"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:text="Faculty of Computing"/>
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp">
+
+                        <EditText
+                            android:id="@+id/faculty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:text="Faculty"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#212121"
+                            android:layout_marginLeft="20sp"
+                            android:background="@android:color/transparent"
+                            android:textCursorDrawable="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="8dp"
+                            android:text="Faculty"
+                            android:textColor="#727272"
+                            android:layout_marginLeft="20sp" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>

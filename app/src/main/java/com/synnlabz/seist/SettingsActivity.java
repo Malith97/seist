@@ -43,6 +43,7 @@ public class SettingsActivity extends AppCompatActivity {
     private EditText mBioField;
     private EditText mAgeField;
     private EditText mYearField;
+    private EditText mDegreeField;
 
     private TextView mNameField;
 
@@ -53,7 +54,7 @@ public class SettingsActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference mUserDatabase;
 
-    private String userId, name, phone, profileImageUrl , faculty , bio , age , year ,userSex;
+    private String userId, name, phone, profileImageUrl , faculty , bio , age , year , degree ,userSex;
 
     private Uri resultUri;
 
@@ -70,6 +71,7 @@ public class SettingsActivity extends AppCompatActivity {
         mPhoneField = (EditText) findViewById(R.id.phone);
         mFacultyField = (EditText) findViewById(R.id.faculty);
         mBioField = (EditText) findViewById(R.id.bio);
+        mDegreeField = (EditText) findViewById(R.id.degree);
         mAgeField = (EditText) findViewById(R.id.age);
         mYearField = (EditText) findViewById(R.id.year);
 
@@ -131,6 +133,10 @@ public class SettingsActivity extends AppCompatActivity {
                         age = map.get("age").toString();
                         mAgeField.setText(age);
                     }
+                    if(map.get("degree")!=null){
+                        degree = map.get("degree").toString();
+                        mDegreeField.setText(degree);
+                    }
                     if(map.get("sex")!=null){
                         userSex = map.get("sex").toString();
                     }
@@ -161,6 +167,7 @@ public class SettingsActivity extends AppCompatActivity {
         name = mNameField.getText().toString();
         phone = mPhoneField.getText().toString();
         faculty = mFacultyField.getText().toString();
+        degree = mDegreeField.getText().toString();
         year = mYearField.getText().toString();
         age = mAgeField.getText().toString();
         bio = mBioField.getText().toString();
@@ -170,6 +177,7 @@ public class SettingsActivity extends AppCompatActivity {
         userInfo.put("phone", phone);
         userInfo.put("faculty", faculty);
         userInfo.put("year", year);
+        userInfo.put("degree", degree);
         userInfo.put("age", age);
         userInfo.put("bio", bio);
         mUserDatabase.updateChildren(userInfo);
