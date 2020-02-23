@@ -3,10 +3,12 @@ package com.synnlabz.seist.Matches;
 public class MatchesObject {
     private String userId;
     private String name;
+    private String intake;
     private String profileImageUrl;
-    public MatchesObject (String userId, String name, String profileImageUrl){
+    public MatchesObject (String userId, String name, String intake , String profileImageUrl){
         this.userId = userId;
         this.name = name;
+        this.intake = intake;
         this.profileImageUrl = profileImageUrl;
     }
 
@@ -22,6 +24,13 @@ public class MatchesObject {
     }
     public void setName(String name){
         this.name = name;
+    }
+
+    public String getIntake(){
+        return intake;
+    }
+    public void setIntake(String intake){
+        this.intake = intake;
     }
 
     public String getProfileImageUrl(){

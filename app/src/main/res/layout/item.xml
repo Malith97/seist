@@ -21,37 +21,52 @@
         android:id="@+id/cardView">
         <LinearLayout
             android:layout_gravity="center"
-            android:layout_width="350dp"
-            android:layout_height="385dp"
+            android:layout_width="300dp"
+            android:layout_height="380dp"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="320dp"
                 android:id="@+id/image"
-                android:scaleType="centerCrop"
-                />
-            <TextView
-                android:id="@+id/name"
-                android:textSize="30sp"
-                android:paddingLeft="28sp"
-                android:textColor="@android:color/black"
-                android:gravity="center|left"
-                android:fontFamily="@font/g_light"
-                tools:text="hello"
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
+                android:scaleType="centerCrop"/>
 
             <TextView
-                android:id="@+id/faculty"
-                android:textSize="18sp"
-                android:paddingLeft="35sp"
+                android:id="@+id/name"
+                android:textSize="20sp"
+                android:paddingStart="25sp"
                 android:textColor="@android:color/black"
                 android:gravity="center|left"
-                android:fontFamily="@font/g_light"
+                android:fontFamily="@font/roboto_regular"
                 tools:text="hello"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"  />
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textSize="13sp"
+                    android:paddingLeft="28sp"
+                    android:gravity="center|left"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Intake"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"  />
+
+                <TextView
+                    android:id="@+id/intake"
+                    android:textSize="13sp"
+                    android:paddingLeft="5sp"
+                    android:gravity="center|left"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="35"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"  />
+
+            </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

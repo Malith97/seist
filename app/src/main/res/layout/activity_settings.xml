@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.synnlabz.seist.SettingsActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.synnlabz.seist.SettingsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/lightred"
-        android:minHeight="?attr/actionBarSize"/>
+        android:minHeight="?attr/actionBarSize" />
 
     <LinearLayout
         android:id="@+id/tablayout"
@@ -25,47 +25,47 @@
             android:id="@+id/tabChats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chats"
-            android:fontFamily="@font/g_light"
-            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:onClick="goToMatches"
             android:background="@color/lightred"
+            android:fontFamily="@font/g_light"
+            android:onClick="goToMatches"
             android:src="@drawable/ic_match"
-            android:layout_marginBottom="10dp"/>
+            android:text="Chats"
+            android:textColor="@color/white" />
 
         <ImageButton
             android:id="@+id/tabStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Home"
-            android:fontFamily="@font/g_light"
-            android:onClick="goToHome"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="@color/lightred"
+            android:fontFamily="@font/g_light"
+            android:onClick="goToHome"
             android:src="@drawable/ic_home"
-            android:layout_marginBottom="10dp"/>
+            android:text="Home"
+            android:textColor="@color/white" />
 
         <ImageButton
             android:id="@+id/tabCalls"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Profile"
-            android:fontFamily="@font/g_light"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="@color/lightred"
+            android:fontFamily="@font/g_light"
             android:src="@drawable/ic_person"
-            android:layout_marginBottom="10dp"/>
+            android:text="Profile"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/scroll_view_1"
-        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
         android:fillViewport="true">
 
         <LinearLayout
@@ -78,11 +78,12 @@
             <RelativeLayout
                 android:id="@+id/rel_lay_10"
                 android:layout_width="match_parent"
-                android:layout_height="220dp">
+                android:layout_height="200dp">
+
                 <RelativeLayout
                     android:id="@+id/rel_lay_8"
                     android:layout_width="match_parent"
-                    android:layout_height="325dp"
+                    android:layout_height="200dp"
                     android:background="@drawable/gradient"
                     android:orientation="horizontal">
 
@@ -116,20 +117,19 @@
                         android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Malith Ileperuma"
-                        android:layout_marginLeft="10sp"
                         android:layout_centerVertical="true"
+                        android:layout_marginLeft="10sp"
                         android:layout_toRightOf="@+id/pulsator"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Malith Ileperuma"
                         android:textColor="#FFF"
-                        android:textSize="18sp"
+                        android:textSize="22sp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
 
 
-
             </RelativeLayout>
-
 
 
             <LinearLayout
@@ -142,7 +142,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
                     android:orientation="horizontal"
                     android:padding="20sp">
 
@@ -153,44 +152,45 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:layout_gravity="center"
+                            android:layout_margin="10dp"
                             android:layout_marginEnd="20sp"
+                            android:layout_marginRight="20sp"
                             android:backgroundTint="@color/black"
-                            android:src="@drawable/ic_bio"
-                            android:layout_marginRight="20sp"/>
+                            android:src="@drawable/ic_bio" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="15dp">
+                        android:orientation="vertical">
 
                         <EditText
                             android:id="@+id/bio"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
-                            android:text="About Me"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="#212121"
                             android:layout_marginLeft="20sp"
                             android:background="@android:color/transparent"
-                            android:textCursorDrawable="@color/black"/>
+                            android:hint="Describe you"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="text"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#212121"
+                            android:textCursorDrawable="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
+                            android:layout_marginLeft="20sp"
                             android:layout_marginTop="8dp"
                             android:text="About Me"
-                            android:textColor="#727272"
-                            android:layout_marginLeft="20sp" />
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="#727272" />
 
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -201,7 +201,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
                     android:orientation="horizontal"
                     android:padding="20sp"
                     android:weightSum="4">
@@ -209,95 +208,103 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5">
+                        android:layout_weight="0.09">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:layout_gravity="center"
+                            android:layout_margin="10dp"
                             android:layout_marginEnd="20sp"
+                            android:layout_marginRight="20sp"
                             android:backgroundTint="@color/black"
-                            android:src="@drawable/ic_phone_black_24dp"
-                            android:layout_marginRight="20sp"/>
+                            android:src="@drawable/ic_phone_black_24dp" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
                             android:id="@+id/phone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="10sp"
-                            android:text="077 255 9562"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="#212121"
-                            android:layout_marginLeft="20sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginRight="10sp"
                             android:background="@android:color/transparent"
-                            android:textCursorDrawable="@color/black"/>
+                            android:hint="Contact No"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="#212121"
+                            android:textCursorDrawable="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
+                            android:layout_marginLeft="20sp"
                             android:layout_marginTop="8dp"
                             android:text="Contact No"
-                            android:textColor="#727272"
-                            android:layout_marginLeft="20sp" />
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="#727272" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5">
+                        android:layout_marginLeft="20sp"
+                        android:layout_weight="0.09">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:layout_gravity="center"
+                            android:layout_margin="10dp"
                             android:layout_marginEnd="20sp"
+                            android:layout_marginRight="20sp"
                             android:backgroundTint="@color/black"
-                            android:src="@drawable/ic_age"
-                            android:layout_marginRight="20sp"/>
+                            android:src="@drawable/ic_age" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
                             android:id="@+id/age"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
-                            android:text="23"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="#212121"
                             android:layout_marginLeft="20sp"
                             android:background="@android:color/transparent"
-                            android:textCursorDrawable="@color/black"/>
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Enter Age"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#212121"
+                            android:textCursorDrawable="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
+                            android:layout_marginLeft="20sp"
                             android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_regular"
                             android:text="Age"
-                            android:textColor="#727272"
-                            android:layout_marginLeft="20sp" />
+                            android:textColor="#727272" />
 
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -308,7 +315,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
                     android:orientation="horizontal"
                     android:padding="20sp">
 
@@ -319,44 +325,45 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:layout_gravity="center"
+                            android:layout_margin="10dp"
                             android:layout_marginEnd="20sp"
+                            android:layout_marginRight="20sp"
                             android:backgroundTint="@color/black"
-                            android:src="@drawable/ic_faculty"
-                            android:layout_marginRight="20sp"/>
+                            android:src="@drawable/ic_faculty" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="15dp">
+                        android:orientation="vertical">
 
                         <EditText
                             android:id="@id/faculty"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
-                            android:text="Faculty of Computing"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="#212121"
                             android:layout_marginLeft="20sp"
                             android:background="@android:color/transparent"
-                            android:textCursorDrawable="@color/black"/>
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Enter your Faculty here"
+                            android:inputType="text"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#212121"
+                            android:textCursorDrawable="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
+                            android:layout_marginLeft="20sp"
                             android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_regular"
                             android:text="Faculty"
-                            android:textColor="#727272"
-                            android:layout_marginLeft="20sp" />
+                            android:textColor="#727272" />
 
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -367,7 +374,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
                     android:orientation="horizontal"
                     android:padding="20sp"
                     android:weightSum="4">
@@ -375,95 +381,102 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5">
+                        android:layout_weight="0.1">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:layout_gravity="center"
+                            android:layout_margin="10dp"
                             android:layout_marginEnd="20sp"
+                            android:layout_marginRight="20sp"
                             android:backgroundTint="@color/black"
-                            android:src="@drawable/ic_degree"
-                            android:layout_marginRight="20sp"/>
+                            android:src="@drawable/ic_degree" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
                             android:id="@+id/degree"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
-                            android:text="CS"
+                            android:layout_marginLeft="20sp"
+                            android:hint="Degree"
+                            android:inputType="text"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/roboto_regular"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="#212121"
-                            android:layout_marginLeft="20sp"
-                            android:background="@android:color/transparent"
-                            android:textCursorDrawable="@color/black"/>
+                            android:textCursorDrawable="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
+                            android:layout_marginLeft="20sp"
                             android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_regular"
                             android:text="Degree"
-                            android:textColor="#727272"
-                            android:layout_marginLeft="20sp" />
+                            android:textColor="#727272" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5">
+                        android:layout_weight="0.1">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:layout_gravity="center"
-                            android:layout_marginEnd="20sp"
+                            android:layout_margin="10dp"
+                            android:layout_marginEnd="10sp"
+                            android:layout_marginRight="20sp"
                             android:backgroundTint="@color/black"
-                            android:src="@drawable/ic_year"
-                            android:layout_marginRight="20sp"/>
+                            android:src="@drawable/ic_year" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
-                            android:id="@+id/year"
+                            android:id="@+id/intake"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
-                            android:text="3rd Year"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="#212121"
                             android:layout_marginLeft="20sp"
                             android:background="@android:color/transparent"
-                            android:textCursorDrawable="@color/black"/>
+                            android:hint="Intake"
+                            android:maxLength="2"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#212121"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textCursorDrawable="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
+                            android:layout_marginLeft="20sp"
                             android:layout_marginTop="8dp"
-                            android:text="Academic Year"
-                            android:textColor="#727272"
-                            android:layout_marginLeft="20sp" />
+                            android:text="Intake"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="#727272" />
 
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -473,24 +486,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true">
+                    android:background="?attr/selectableItemBackground">
 
                     <Button
-                        android:background="@drawable/button"
                         android:id="@+id/confirm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/phone"
-                        android:text="Confirm"
-                        android:elevation="100dp"
-                        android:fontFamily="@font/g_light"
-                        android:textStyle="bold"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/white"
-                        android:layout_marginBottom="15sp"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15sp"
+                        android:background="@drawable/button"
+                        android:elevation="100dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Confirm"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -500,18 +512,18 @@
                     android:background="?attr/selectableItemBackground">
 
                     <Button
-                        android:background="@drawable/button"
                         android:id="@+id/logout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Logout"
-                        android:fontFamily="@font/g_light"
-                        android:onClick="logoutUser"
-                        android:layout_marginBottom="10sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10sp"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/roboto_regular"
+                        android:onClick="logoutUser"
+                        android:text="Logout"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </LinearLayout>

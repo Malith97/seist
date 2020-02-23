@@ -42,7 +42,7 @@ public class SettingsActivity extends AppCompatActivity {
     private EditText mFacultyField;
     private EditText mBioField;
     private EditText mAgeField;
-    private EditText mYearField;
+    private EditText mIntakeField;
     private EditText mDegreeField;
 
     private TextView mNameField;
@@ -54,7 +54,7 @@ public class SettingsActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference mUserDatabase;
 
-    private String userId, name, phone, profileImageUrl , faculty , bio , age , year , degree ,userSex;
+    private String userId, name, phone, profileImageUrl , faculty , bio , age , intake , degree ,userSex;
 
     private Uri resultUri;
 
@@ -73,7 +73,7 @@ public class SettingsActivity extends AppCompatActivity {
         mBioField = (EditText) findViewById(R.id.bio);
         mDegreeField = (EditText) findViewById(R.id.degree);
         mAgeField = (EditText) findViewById(R.id.age);
-        mYearField = (EditText) findViewById(R.id.year);
+        mIntakeField = (EditText) findViewById(R.id.intake);
 
         mProfileImage = (ImageView) findViewById(R.id.profileImage);
 
@@ -121,9 +121,9 @@ public class SettingsActivity extends AppCompatActivity {
                         faculty = map.get("faculty").toString();
                         mFacultyField.setText(faculty);
                     }
-                    if(map.get("year")!=null){
-                        year = map.get("year").toString();
-                        mYearField.setText(year);
+                    if(map.get("intake")!=null){
+                        intake = map.get("intake").toString();
+                        mIntakeField.setText(intake);
                     }
                     if(map.get("bio")!=null){
                         bio = map.get("bio").toString();
@@ -168,7 +168,7 @@ public class SettingsActivity extends AppCompatActivity {
         phone = mPhoneField.getText().toString();
         faculty = mFacultyField.getText().toString();
         degree = mDegreeField.getText().toString();
-        year = mYearField.getText().toString();
+        intake = mIntakeField.getText().toString();
         age = mAgeField.getText().toString();
         bio = mBioField.getText().toString();
 
@@ -176,7 +176,7 @@ public class SettingsActivity extends AppCompatActivity {
         userInfo.put("name", name);
         userInfo.put("phone", phone);
         userInfo.put("faculty", faculty);
-        userInfo.put("year", year);
+        userInfo.put("intake", intake);
         userInfo.put("degree", degree);
         userInfo.put("age", age);
         userInfo.put("bio", bio);

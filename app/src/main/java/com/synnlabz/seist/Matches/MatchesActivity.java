@@ -75,16 +75,20 @@ public class MatchesActivity extends AppCompatActivity {
                 if (dataSnapshot.exists()){
                     String userId = dataSnapshot.getKey();
                     String name = "";
+                    String intake = "";
                     String profileImageUrl = "";
                     if(dataSnapshot.child("name").getValue()!=null){
                         name = dataSnapshot.child("name").getValue().toString();
+                    }
+                    if(dataSnapshot.child("intake").getValue()!=null){
+                        intake = dataSnapshot.child("intake").getValue().toString();
                     }
                     if(dataSnapshot.child("profileImageUrl").getValue()!=null){
                         profileImageUrl = dataSnapshot.child("profileImageUrl").getValue().toString();
                     }
 
 
-                    MatchesObject obj = new MatchesObject(userId, name, profileImageUrl);
+                    MatchesObject obj = new MatchesObject(userId, name, intake , profileImageUrl);
                     resultsMatches.add(obj);
                     mMatchesAdapter.notifyDataSetChanged();
                 }

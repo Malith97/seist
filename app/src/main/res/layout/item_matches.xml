@@ -30,21 +30,49 @@
                 android:paddingLeft="20sp">
 
                 <TextView
+                    android:id="@+id/MatchName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="10sp"
-                    android:paddingTop="30dp"
+                    android:paddingBottom="5sp"
+                    android:paddingTop="35dp"
                     android:paddingLeft="100sp"
+                    android:textSize="18dp"
                     android:fontFamily="@font/lato_regular"
-                    android:text="Name"
-                    android:id="@+id/MatchName"/>
+                    android:textColor="@color/black"
+                    android:text="Name"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10sp"
+                        android:textSize="13dp"
+                        android:paddingLeft="100sp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Intake"/>
+
+                    <TextView
+                        android:id="@+id/MatchIntake"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10sp"
+                        android:paddingLeft="4sp"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="35"/>
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="20sp"
                     android:paddingLeft="100sp"
                     android:text="ID"
+                    android:visibility="invisible"
                     android:id="@+id/Matchid"/>
 
             </LinearLayout>

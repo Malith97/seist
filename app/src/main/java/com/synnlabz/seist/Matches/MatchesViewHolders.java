@@ -12,7 +12,7 @@ import com.synnlabz.seist.Chat.ChatActivity;
 import com.synnlabz.seist.R;
 
 public class MatchesViewHolders extends RecyclerView.ViewHolder implements View.OnClickListener{
-    public TextView mMatchId, mMatchName;
+    public TextView mMatchId, mMatchName , mMatchIntake;
     public ImageView mMatchImage;
     public MatchesViewHolders(View itemView) {
         super(itemView);
@@ -20,6 +20,7 @@ public class MatchesViewHolders extends RecyclerView.ViewHolder implements View.
 
         mMatchId = (TextView) itemView.findViewById(R.id.Matchid);
         mMatchName = (TextView) itemView.findViewById(R.id.MatchName);
+        mMatchIntake = (TextView) itemView.findViewById(R.id.MatchIntake);
         mMatchImage = (ImageView) itemView.findViewById(R.id.MatchImage);
     }
 

@@ -100,6 +100,7 @@
                     android:src="@drawable/skip_red_24dp"
                     app:backgroundTint="@android:color/white"
                     app:fabSize="auto"
+                    android:onClick="DislikeBtn"
                     app:rippleColor="#22ED7563" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -127,6 +128,7 @@
                     android:src="@drawable/like_green_24dp"
                     app:backgroundTint="@android:color/white"
                     app:fabSize="auto"
+                    android:onClick="LikeBtn"
                     app:rippleColor="#226FE2B3" />
 
             </RelativeLayout>

@@ -30,14 +30,14 @@ import pl.bclogic.pulsator4droid.library.PulsatorLayout;
 
 public class Viewprofile extends AppCompatActivity {
 
-    private TextView mFacultyField , mBioField , mAgeField , mYearField , mNameField , mDegreeField;
+    private TextView mFacultyField , mBioField , mAgeField , mIntakeField , mNameField , mDegreeField;
 
     private ImageView mProfileImage;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mUserDatabase;
 
-    private String userId, matchId, name, profileImageUrl , faculty , bio , age , year ,degree , userSex;
+    private String userId, matchId, name, profileImageUrl , faculty , bio , age , intake ,degree , userSex;
 
     private Uri resultUri;
 
@@ -55,7 +55,7 @@ public class Viewprofile extends AppCompatActivity {
         mBioField = (TextView) findViewById(R.id.bio);
         mAgeField = (TextView) findViewById(R.id.age);
         mDegreeField = (TextView) findViewById(R.id.degree);
-        mYearField = (TextView) findViewById(R.id.year);
+        mIntakeField = (TextView) findViewById(R.id.intake);
         mProfileImage = (ImageView) findViewById(R.id.profileImage);
 
         mAuth = FirebaseAuth.getInstance();
@@ -89,9 +89,9 @@ public class Viewprofile extends AppCompatActivity {
                         faculty = map.get("faculty").toString();
                         mFacultyField.setText(faculty);
                     }
-                    if(map.get("year")!=null){
-                        year = map.get("year").toString();
-                        mYearField.setText(year);
+                    if(map.get("intake")!=null){
+                        intake = map.get("intake").toString();
+                        mIntakeField.setText(intake);
                     }
                     if(map.get("bio")!=null){
                         bio = map.get("bio").toString();

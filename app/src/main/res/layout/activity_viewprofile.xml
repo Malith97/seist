@@ -44,10 +44,10 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="405dp">
+                android:layout_height="470dp">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="325dp"
+                    android:layout_height="400dp"
                     android:background="@drawable/gradient"
                     android:orientation="vertical">
 
@@ -61,7 +61,8 @@
                         app:pulse_repeat="0"
                         app:pulse_color="@color/white"
                         app:pulse_startFromScratch="false"
-                        app:pulse_interpolator="Linear">
+                        app:pulse_interpolator="Linear"
+                        android:layout_marginTop="25dp">
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_centerInParent="true"
@@ -81,8 +82,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Malith Ileperuma"
+                        android:layout_margin="20sp"
                         android:textColor="#FFF"
-                        android:textSize="18dp"
+                        android:textSize="22dp"
+                        android:fontFamily="@font/roboto_regular"
                         android:textStyle="bold" />
 
                     <TextView
@@ -92,8 +95,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Like see the sky and interested in programming"
-                        android:textColor="@color/graylight"
-                        android:textStyle="bold" />
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -101,7 +105,7 @@
                     android:layout_width="300dp"
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="275dp">
+                    android:layout_marginTop="350dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -117,6 +121,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Age"
+                                android:fontFamily="@font/roboto_regular"
                                 android:textSize="20sp"
                                 />
                             <TextView
@@ -127,6 +132,7 @@
                                 android:textStyle="bold"
                                 android:textSize="20sp"
                                 android:paddingTop="10dp"
+                                android:fontFamily="@font/roboto_regular"
                                 android:textColor="@color/black"
                                 />
                         </LinearLayout>
@@ -140,15 +146,18 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Degree"
+                                android:fontFamily="@font/roboto_regular"
                                 android:textSize="20sp"
                                 />
                             <TextView
+                                android:id="@+id/degree"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="CS"
                                 android:textStyle="bold"
                                 android:textSize="20sp"
                                 android:paddingTop="10dp"
+                                android:fontFamily="@font/roboto_regular"
                                 android:textColor="@color/black"
                                 />
                         </LinearLayout>
@@ -161,17 +170,19 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Year"
+                                android:text="Intake"
+                                android:fontFamily="@font/roboto_regular"
                                 android:textSize="20sp"
                                 />
                             <TextView
-                                android:id="@+id/year"
+                                android:id="@+id/intake"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="3"
+                                android:text="35"
                                 android:textStyle="bold"
                                 android:textSize="20sp"
                                 android:paddingTop="10dp"
+                                android:fontFamily="@font/roboto_regular"
                                 android:textColor="@color/black"
                                 />
                         </LinearLayout>
@@ -191,7 +202,8 @@
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:orientation="horizontal"
-                    android:padding="20sp">
+                    android:padding="20sp"
+                    android:layout_marginLeft="15dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -215,13 +227,14 @@
                         android:orientation="vertical"
                         android:layout_marginLeft="15dp">
 
-                        <EditText
+                        <TextView
                             android:id="@+id/faculty"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10sp"
-                            android:text="Faculty"
+                            android:text="Faculty of Computing"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:fontFamily="@font/roboto_regular"
                             android:textColor="#212121"
                             android:layout_marginLeft="20sp"
                             android:background="@android:color/transparent"
@@ -233,6 +246,7 @@
                             android:layout_marginStart="10sp"
                             android:layout_marginTop="8dp"
                             android:text="Faculty"
+                            android:fontFamily="@font/roboto_regular"
                             android:textColor="#727272"
                             android:layout_marginLeft="20sp" />
 
