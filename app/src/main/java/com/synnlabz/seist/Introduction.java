@@ -58,6 +58,18 @@ public class Introduction extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(firebaseAuthStateListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mAuth.removeAuthStateListener(firebaseAuthStateListener);
+    }
+
     public void openLogin() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);

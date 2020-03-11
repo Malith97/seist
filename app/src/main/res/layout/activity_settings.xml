@@ -10,15 +10,15 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/lightred"
+        android:layout_height="20dp"
+        android:background="#FFFFFF"
         android:minHeight="?attr/actionBarSize" />
 
     <LinearLayout
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightred"
+        android:background="#FFFFFF"
         android:weightSum="3">
 
         <ImageButton
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@color/lightred"
+            android:background="#FFFFFF"
             android:fontFamily="@font/g_light"
             android:onClick="goToMatches"
             android:src="@drawable/ic_match"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@color/lightred"
+            android:background="#FFFFFF"
             android:fontFamily="@font/g_light"
             android:onClick="goToHome"
             android:src="@drawable/ic_home"
@@ -53,9 +53,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@color/lightred"
+            android:background="#FFFFFF"
             android:fontFamily="@font/g_light"
-            android:src="@drawable/ic_person"
+            android:src="@drawable/ic_person_red"
             android:text="Profile"
             android:textColor="@color/white" />
 
@@ -84,7 +84,7 @@
                     android:id="@+id/rel_lay_8"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:background="@drawable/gradient"
+                    android:background="#FFFFFF"
                     android:orientation="horizontal">
 
                     <pl.bclogic.pulsator4droid.library.PulsatorLayout
@@ -109,7 +109,24 @@
                             android:layout_centerInParent="true"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="20dp"
-                            android:src="@drawable/default_user" />
+                            android:src="@drawable/default_user"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:paddingRight="25dp"
+                            android:paddingBottom="20dp"
+                            android:elevation="5dp">
+
+                            <Button
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/ic_add_circle_black_24dp"
+                                android:elevation="5dp" />
+
+                        </LinearLayout>
 
                     </pl.bclogic.pulsator4droid.library.PulsatorLayout>
 
@@ -122,7 +139,7 @@
                         android:layout_toRightOf="@+id/pulsator"
                         android:fontFamily="@font/roboto_regular"
                         android:text="Malith Ileperuma"
-                        android:textColor="#FFF"
+                        android:textColor="#000"
                         android:textSize="22sp"
                         android:textStyle="bold" />
 

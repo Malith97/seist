@@ -10,15 +10,15 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/lightred"
+        android:layout_height="20dp"
+        android:background="#FFFFFF"
         android:minHeight="?attr/actionBarSize" />
 
     <LinearLayout
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightred"
+        android:background="#FFFFFF"
         app:tabSelectedTextColor="@android:color/white"
         app:tabTextColor="@android:color/white"
         android:weightSum="3">
@@ -32,8 +32,8 @@
             android:textColor="@color/white"
             android:layout_weight="1"
             android:onClick="goToMatches"
-            android:background="@color/lightred"
-            android:src="@drawable/ic_match"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_match_red"
             android:layout_marginBottom="10dp"/>
 
         <ImageButton
@@ -45,7 +45,7 @@
             android:fontFamily="@font/g_light"
             android:onClick="goToHome"
             android:layout_weight="1"
-            android:background="@color/lightred"
+            android:background="#FFFFFF"
             android:src="@drawable/ic_home"
             android:layout_marginBottom="10dp"/>
 
@@ -58,7 +58,7 @@
             android:onClick="goToSettings"
             android:fontFamily="@font/g_light"
             android:layout_weight="1"
-            android:background="@color/lightred"
+            android:background="#FFFFFF"
             android:src="@drawable/ic_person"
             android:layout_marginBottom="10dp"/>
 

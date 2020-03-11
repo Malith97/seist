@@ -19,15 +19,15 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/lightred"
+                android:layout_height="20dp"
+                android:background="#FFFFFF"
                 android:minHeight="?attr/actionBarSize" />
 
             <LinearLayout
                 android:id="@+id/tablayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lightred"
+                android:background="#FFFFFF"
                 app:tabSelectedTextColor="@android:color/white"
                 app:tabTextColor="@android:color/white"
                 android:weightSum="3">
@@ -41,7 +41,7 @@
                     android:textColor="@color/white"
                     android:layout_weight="1"
                     android:onClick="goToMatches"
-                    android:background="@color/lightred"
+                    android:background="#FFFFFF"
                     android:src="@drawable/ic_match"
                     android:layout_marginBottom="10dp"/>
 
@@ -53,8 +53,8 @@
                     android:text="Home"
                     android:fontFamily="@font/g_light"
                     android:layout_weight="1"
-                    android:background="@color/lightred"
-                    android:src="@drawable/ic_home"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_home_red"
                     android:layout_marginBottom="10dp"/>
 
                 <ImageButton
@@ -66,7 +66,7 @@
                     android:fontFamily="@font/g_light"
                     android:layout_weight="1"
                     android:onClick="goToSettings"
-                    android:background="@color/lightred"
+                    android:background="#FFFFFF"
                     android:src="@drawable/ic_person"
                     android:layout_marginBottom="10dp"/>
 
@@ -85,7 +85,7 @@
                 android:layout_height="80dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="-1dp"
-                android:background="@color/lightred"
+                android:background="#FFFFFF"
                 android:clipChildren="false"
                 android:orientation="horizontal">
 
@@ -100,7 +100,6 @@
                     android:src="@drawable/skip_red_24dp"
                     app:backgroundTint="@android:color/white"
                     app:fabSize="auto"
-                    android:onClick="DislikeBtn"
                     app:rippleColor="#22ED7563" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -128,7 +127,6 @@
                     android:src="@drawable/like_green_24dp"
                     app:backgroundTint="@android:color/white"
                     app:fabSize="auto"
-                    android:onClick="LikeBtn"
                     app:rippleColor="#226FE2B3" />
 
             </RelativeLayout>
@@ -138,7 +136,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_above="@+id/button_container"
-                android:background="@color/proColor"
+                android:background="#FFFFFF"
                 app:rotation_degrees="15.5"
                 tools:context=".MyActivity" />
 
