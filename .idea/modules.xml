@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GitHub-seist.iml" filepath="$PROJECT_DIR$/GitHub-seist.iml" group="seist" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/seist.iml" filepath="$PROJECT_DIR$/seist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/seist-app.iml" filepath="$PROJECT_DIR$/app/seist-app.iml" group="seist/app" />
     </modules>
   </component>
 </project>

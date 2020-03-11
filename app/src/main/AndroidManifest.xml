@@ -18,9 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResetPassword"></activity>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".ResetPassword" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Introduction">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +29,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".SettingsActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".SettingsActivity"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".Matches.MatchesActivity" />
         <activity android:name=".Chat.ChatActivity" />
         <activity android:name=".Profile.Viewprofile" />
