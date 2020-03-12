@@ -7,59 +7,15 @@
     android:orientation="vertical"
     tools:context="com.synnlabz.seist.SettingsActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:background="#FFFFFF"
-        android:minHeight="?attr/actionBarSize" />
-
-    <LinearLayout
-        android:id="@+id/tablayout"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:weightSum="3">
-
-        <ImageButton
-            android:id="@+id/tabChats"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:fontFamily="@font/g_light"
-            android:onClick="goToMatches"
-            android:src="@drawable/ic_match"
-            android:text="Chats"
-            android:textColor="@color/white" />
-
-        <ImageButton
-            android:id="@+id/tabStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:fontFamily="@font/g_light"
-            android:onClick="goToHome"
-            android:src="@drawable/ic_home"
-            android:text="Home"
-            android:textColor="@color/white" />
-
-        <ImageButton
-            android:id="@+id/tabCalls"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:fontFamily="@font/g_light"
-            android:src="@drawable/ic_person_red"
-            android:text="Profile"
-            android:textColor="@color/white" />
-
-    </LinearLayout>
+        app:itemBackground="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/top_navigation_toolbar"
+        android:layout_alignParentBottom="true"/>
 
     <ScrollView
         android:id="@+id/scroll_view_1"

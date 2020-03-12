@@ -7,63 +7,14 @@
     tools:context="com.synnlabz.seist.Matches.MatchesActivity"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:background="#FFFFFF"
-        android:minHeight="?attr/actionBarSize" />
-
-    <LinearLayout
-        android:id="@+id/tablayout"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        app:tabSelectedTextColor="@android:color/white"
-        app:tabTextColor="@android:color/white"
-        android:weightSum="3">
-
-        <ImageButton
-            android:id="@+id/tabChats"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chats"
-            android:fontFamily="@font/g_light"
-            android:textColor="@color/white"
-            android:layout_weight="1"
-            android:onClick="goToMatches"
-            android:background="#FFFFFF"
-            android:src="@drawable/ic_match_red"
-            android:layout_marginBottom="10dp"/>
-
-        <ImageButton
-            android:id="@+id/tabStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Home"
-            android:fontFamily="@font/g_light"
-            android:onClick="goToHome"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:src="@drawable/ic_home"
-            android:layout_marginBottom="10dp"/>
-
-        <ImageButton
-            android:id="@+id/tabCalls"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Profile"
-            android:onClick="goToSettings"
-            android:fontFamily="@font/g_light"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:src="@drawable/ic_person"
-            android:layout_marginBottom="10dp"/>
-
-    </LinearLayout>
-
+        app:itemBackground="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/top_navigation_toolbar"/>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
