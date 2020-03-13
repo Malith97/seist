@@ -4,6 +4,8 @@ import android.content.Intent;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -42,6 +44,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText mEmail, mPassword, mName;
 
     private RadioGroup mRadioGroup;
+    private RadioButton Left , Right;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthStateListener;
@@ -50,6 +53,9 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        Left = findViewById(R.id.male);
+        Right = findViewById(R.id.female);
 
         rellay1 = (RelativeLayout) findViewById(R.id.rellay1);
         rellay2 = (RelativeLayout) findViewById(R.id.rellay2);
@@ -132,5 +138,23 @@ public class RegistrationActivity extends AppCompatActivity {
 
     public void toToReset(View view) {
         startActivity(new Intent(RegistrationActivity.this,ResetPassword.class));
+    }
+
+    public void onRadioclicked(View view) {
+        boolean isSelected = ((RadioButton)view).isChecked();
+        switch (view.getId()){
+            case R.id.male:
+                if(isSelected){
+                    Left.setTextColor(Color.WHITE);
+                    Right.setTextColor(Color.BLACK);
+                }
+                break;
+            case R.id.female:
+                if(isSelected){
+                    Right.setTextColor(Color.WHITE);
+                    Left.setTextColor(Color.BLACK);
+                }
+                break;
+        }
     }
 }

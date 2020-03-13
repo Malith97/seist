@@ -135,19 +135,13 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lin_lay_4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="100dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_regular"
-                        android:text="Gender"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
 
                     <RadioGroup
                         android:gravity="center"
@@ -155,32 +149,46 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
                         android:fontFamily="@font/roboto_regular"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
+                        android:padding="10dp"
                         android:orientation="horizontal"
                         android:weightSum="2">
 
                         <RadioButton
+                            android:id="@+id/male"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="50dp"
                             android:fontFamily="@font/roboto_regular"
                             android:text="Male"
-                            android:textColor="@color/black"
+                            android:padding="15dp"
+                            android:checked="true"
+                            android:textColor="@color/white"
                             android:textSize="15sp"
-                            android:layout_weight="1"/>
+                            android:button="@android:color/transparent"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_button_left_selector"
+                            android:onClick="onRadioclicked"/>
                         <RadioButton
+                            android:id="@+id/female"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="50dp"
                             android:fontFamily="@font/roboto_regular"
                             android:text="Female"
+                            android:padding="15dp"
+                            android:checked="false"
                             android:textColor="@color/black"
                             android:textSize="15sp"
-                            android:layout_weight="1"/>
+                            android:button="@android:color/transparent"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_button_right_selector"
+                            android:onClick="onRadioclicked"/>
                     </RadioGroup>
 
                 </LinearLayout>
@@ -192,8 +200,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_below="@+id/linlay1"
+                android:layout_marginBottom="15dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:paddingLeft="70dp"

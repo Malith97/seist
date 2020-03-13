@@ -65,7 +65,7 @@
                             android:background="@drawable/et_bg"
                             android:hint="Username"
                             android:drawableRight="@drawable/ic_person"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/roboto_regular"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
                             android:textColor="@color/black"
@@ -95,7 +95,7 @@
                             android:hint="Password"
                             android:background="@drawable/et_bg"
                             android:drawableRight="@drawable/ic_person"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/roboto_regular"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
                             android:textColor="@color/black"
@@ -141,10 +141,9 @@
             android:layout_height="wrap_content"
             android:background="@color/transparent"
             android:fontFamily="@font/roboto_regular"
-            android:text="Signup Now"
+            android:text="Register Now"
             android:onClick="OpenRegister"
-            android:textAllCaps="true"
-            android:textColor="@color/gradStart" />
+            android:textColor="@color/black" />
 
         <Button
             android:layout_width="wrap_content"
@@ -154,8 +153,7 @@
             android:onClick="goToForgot"
             android:fontFamily="@font/roboto_regular"
             android:text="Forgot Password?"
-            android:textAllCaps="true"
-            android:textColor="@color/gradStart" />
+            android:textColor="@color/black" />
 
     </RelativeLayout>
 
