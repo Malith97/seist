@@ -47,6 +47,8 @@ public class MatchesActivity extends AppCompatActivity {
                     case R.id.match:
                         return true;
                     case R.id.main:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.profile:
                         startActivity(new Intent(getApplicationContext(),SettingsActivity.class));

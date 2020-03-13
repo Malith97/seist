@@ -27,6 +27,8 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImagechat"
             android:layout_width="40dp"
+            android:clickable="true"
+            android:onClick="ViewProfile"
             android:layout_height="40dp"
             android:src="@drawable/default_user">
         </de.hdodenhof.circleimageview.CircleImageView>
@@ -41,22 +43,13 @@
             android:textColor="@color/white"
             android:layout_marginLeft="30sp"/>
 
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/btn_arrow"
-            android:onClick="ViewProfile"
-            android:layout_gravity="end"
-            android:fontFamily="@font/g_light"
-            android:textColor="@color/white"
-            android:src="@drawable/ic_more_vert_black_24dp"/>
-
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/chat_back"
         android:layout_below="@id/toolbar"
         android:layout_above="@id/bottom"/>
 

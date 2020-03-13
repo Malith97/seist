@@ -82,6 +82,7 @@ public class RegistrationActivity extends AppCompatActivity {
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 int selectId = mRadioGroup.getCheckedRadioButtonId();
 
                 final RadioButton radioButton = (RadioButton) findViewById(selectId);
@@ -127,5 +128,9 @@ public class RegistrationActivity extends AppCompatActivity {
 
     public void OpensignUp(View view) {
         startActivity(new Intent(RegistrationActivity.this,LoginActivity.class));
+    }
+
+    public void toToReset(View view) {
+        startActivity(new Intent(RegistrationActivity.this,ResetPassword.class));
     }
 }

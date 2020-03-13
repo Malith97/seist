@@ -64,15 +64,6 @@ public class Viewprofile extends AppCompatActivity {
         mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(matchId);
 
         getUserInfo();
-
-        mProfileImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setType("image/*");
-                startActivityForResult(intent, 1);
-            }
-        });
     }
 
     private void getUserInfo() {
