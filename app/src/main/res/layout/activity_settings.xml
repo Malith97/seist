@@ -102,6 +102,13 @@
 
                 </RelativeLayout>
 
+                <ImageButton
+                    android:id="@+id/info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/rel_lay_8"
+                    android:background="@drawable/btn_blue"
+                    android:src="@drawable/ic_info"/>
 
             </RelativeLayout>
 

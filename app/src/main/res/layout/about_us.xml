@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/toast_info"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_about">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Designed  Developed by"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"/>
+
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_below="@id/heading"
+            android:layout_centerHorizontal="true"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/insta"/>
+
+        <RelativeLayout
+            android:id="@+id/about_rel_2"
+            android:layout_below="@id/imageview"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/fb_logo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/facebook_logo"/>
+
+                <TextView
+                    android:id="@+id/fb_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@id/fb_logo"
+                    android:layout_height="wrap_content"
+                    android:text="facebook.com/synnlabz"
+                    android:textSize="15dp"
+                    android:paddingTop="7dp"
+                    android:paddingLeft="15dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/about_rel_3"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/about_rel_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/insta_logo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/insta_logo"/>
+
+                <TextView
+                    android:id="@+id/insta_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@id/insta_logo"
+                    android:layout_height="wrap_content"
+                    android:text="instagram.com/synnlabz"
+                    android:textSize="15dp"
+                    android:paddingTop="6dp"
+                    android:paddingLeft="15dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+
+</RelativeLayout>
