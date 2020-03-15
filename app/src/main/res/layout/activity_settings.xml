@@ -478,11 +478,11 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="15sp"
-                        android:background="@drawable/button"
+                        android:background="@drawable/button_border_red"
                         android:elevation="100dp"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="Confirm"
-                        android:textColor="@color/white"
+                        android:text="Save Details"
+                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -499,11 +499,12 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="10sp"
-                        android:background="@drawable/button"
+                        android:background="@drawable/button_border_red"
                         android:fontFamily="@font/roboto_regular"
                         android:onClick="logoutUser"
                         android:text="Logout"
-                        android:textColor="@color/white"
+                        android:elevation="100dp"
+                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                 </LinearLayout>

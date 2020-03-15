@@ -16,10 +16,18 @@
         app:lazyloader_dotsDist="10dp"
         app:lazyloader_dotsRadius="16dp"
         app:lazyloader_firstDelayDur="150"
-        app:lazyloader_firstDotColor="@color/lightred"
+        app:lazyloader_firstDotColor="#F5B7B1"
         app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
         app:lazyloader_secondDelayDur="300"
-        app:lazyloader_secondDotColor="@color/blue"
-        app:lazyloader_thirdDotColor="@color/black" />
+        app:lazyloader_secondDotColor="#EC7063 "
+        app:lazyloader_thirdDotColor="#E74C3C"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please wait...."
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="20dp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

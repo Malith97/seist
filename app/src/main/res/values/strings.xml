@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Swaywimme</string>
+    <string name="error_email">Your email is not valid</string>
 </resources>

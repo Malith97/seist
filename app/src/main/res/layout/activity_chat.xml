@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e6e6e6"
+    android:background="@drawable/chat_back"
     tools:context="com.synnlabz.seist.Chat.ChatActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -28,6 +28,7 @@
             android:id="@+id/profileImagechat"
             android:layout_width="40dp"
             android:clickable="true"
+            android:layout_marginStart="35dp"
             android:onClick="ViewProfile"
             android:layout_height="40dp"
             android:src="@drawable/default_user">
@@ -41,7 +42,7 @@
             android:textSize="19sp"
             android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
-            android:layout_marginLeft="30sp"/>
+            android:layout_marginLeft="15sp"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -56,8 +57,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:padding="5dp"
+        android:layout_marginBottom="5dp"
         android:id="@+id/bottom"
-        android:background="#fff"
+        android:background="@drawable/background_chat"
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content">
 
@@ -67,6 +69,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:fontFamily="@font/roboto_regular"
+            android:paddingLeft="20dp"
             android:hint="Type a message..."
             android:layout_toLeftOf="@id/send"
             android:layout_centerVertical="true"/>

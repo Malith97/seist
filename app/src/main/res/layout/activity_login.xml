@@ -63,7 +63,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:background="@drawable/et_bg"
-                            android:hint="Username"
+                            android:hint="Email"
                             android:drawableRight="@drawable/ic_person"
                             android:fontFamily="@font/roboto_regular"
                             android:paddingLeft="15dp"
