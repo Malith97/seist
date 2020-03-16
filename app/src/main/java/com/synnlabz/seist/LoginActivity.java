@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity{
         rellay1 = (RelativeLayout) findViewById(R.id.rellay1);
         rellay2 = (RelativeLayout) findViewById(R.id.rellay2);
 
-        handler.postDelayed(runnable, 1500); //2000 is the timeout for the splash
+        handler.postDelayed(runnable, 1500); //1500 is the timeout for the splash
 
         mAuth = FirebaseAuth.getInstance();
         firebaseAuthStateListener = new FirebaseAuth.AuthStateListener() {
@@ -93,7 +93,7 @@ public class LoginActivity extends AppCompatActivity{
                         public void run() {
                             loadingDialog.dismissDialog();
                         }
-                    },2750);
+                    },2500);
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {

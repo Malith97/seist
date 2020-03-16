@@ -4,11 +4,13 @@ public class MatchesObject {
     private String userId;
     private String name;
     private String intake;
+    private String degree;
     private String profileImageUrl;
-    public MatchesObject (String userId, String name, String intake , String profileImageUrl){
+    public MatchesObject (String userId, String name, String intake , String degree , String profileImageUrl){
         this.userId = userId;
         this.name = name;
         this.intake = intake;
+        this.degree = degree;
         this.profileImageUrl = profileImageUrl;
     }
 
@@ -31,6 +33,13 @@ public class MatchesObject {
     }
     public void setIntake(String intake){
         this.intake = intake;
+    }
+
+    public String getDegree(){
+        return degree;
+    }
+    public void setDegree(String degree){
+        this.degree = degree;
     }
 
     public String getProfileImageUrl(){

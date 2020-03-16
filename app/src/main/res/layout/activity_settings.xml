@@ -93,6 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10sp"
+                        android:layout_marginRight="5sp"
                         android:layout_toRightOf="@+id/pulsator"
                         android:fontFamily="@font/roboto_regular"
                         android:text="Malith Ileperuma"

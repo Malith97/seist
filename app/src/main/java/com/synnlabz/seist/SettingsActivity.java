@@ -289,22 +289,14 @@ public class SettingsActivity extends AppCompatActivity {
     public void logoutUser(View view) {
         mAuth.signOut();
         Intent intent = new Intent(SettingsActivity.this, LoginActivity.class);
+        intent.putExtra("finish", true);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();
         return;
     }
 
-    public void goToHome(View view) {
-        Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
-        startActivity(intent);
-        return;
+    public void onBackPressed() {
+        //do nothing
     }
-
-    public void goToMatches(View view) {
-        Intent intent = new Intent(SettingsActivity.this, MatchesActivity.class);
-        startActivity(intent);
-        return;
-    }
-
-
 }

@@ -101,6 +101,7 @@ public class MatchesActivity extends AppCompatActivity {
                     String userId = dataSnapshot.getKey();
                     String name = "";
                     String intake = "";
+                    String degree = "";
                     String profileImageUrl = "";
                     if(dataSnapshot.child("name").getValue()!=null){
                         name = dataSnapshot.child("name").getValue().toString();
@@ -108,12 +109,15 @@ public class MatchesActivity extends AppCompatActivity {
                     if(dataSnapshot.child("intake").getValue()!=null){
                         intake = dataSnapshot.child("intake").getValue().toString();
                     }
+                    if(dataSnapshot.child("degree").getValue()!=null){
+                        degree = dataSnapshot.child("degree").getValue().toString();
+                    }
                     if(dataSnapshot.child("profileImageUrl").getValue()!=null){
                         profileImageUrl = dataSnapshot.child("profileImageUrl").getValue().toString();
                     }
 
 
-                    MatchesObject obj = new MatchesObject(userId, name, intake , profileImageUrl);
+                    MatchesObject obj = new MatchesObject(userId, name, intake , degree , profileImageUrl);
                     resultsMatches.add(obj);
                     mMatchesAdapter.notifyDataSetChanged();
                 }

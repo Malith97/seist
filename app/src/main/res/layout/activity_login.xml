@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:background="@color/white"
+    android:background="@drawable/material_back_new"
     tools:context="com.synnlabz.seist.LoginActivity">
 
     <RelativeLayout
@@ -37,6 +37,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Login"
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
@@ -119,6 +120,7 @@
                 android:paddingLeft="70dp"
                 android:paddingRight="70dp"
                 android:text="Login Now"
+                android:textStyle="bold"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
@@ -143,6 +145,7 @@
             android:fontFamily="@font/roboto_regular"
             android:text="Register Now"
             android:onClick="OpenRegister"
+            android:textStyle="bold"
             android:textColor="@color/black" />
 
         <Button
@@ -153,6 +156,7 @@
             android:onClick="goToForgot"
             android:fontFamily="@font/roboto_regular"
             android:text="Forgot Password?"
+            android:textStyle="bold"
             android:textColor="@color/black" />
 
     </RelativeLayout>
