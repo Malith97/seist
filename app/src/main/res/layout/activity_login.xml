@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:background="@drawable/material_back_new"
+    android:background="@drawable/material_dark"
     tools:context="com.synnlabz.seist.LoginActivity">
 
     <RelativeLayout
@@ -38,7 +38,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:text="Login"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="30sp" />
 
             <LinearLayout
@@ -69,7 +69,7 @@
                             android:fontFamily="@font/roboto_regular"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="15sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -99,7 +99,7 @@
                             android:fontFamily="@font/roboto_regular"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="15sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -146,7 +146,7 @@
             android:text="Register Now"
             android:onClick="OpenRegister"
             android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
         <Button
             android:layout_width="wrap_content"
@@ -157,7 +157,7 @@
             android:fontFamily="@font/roboto_regular"
             android:text="Forgot Password?"
             android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 

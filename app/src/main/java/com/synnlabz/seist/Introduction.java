@@ -71,12 +71,10 @@ public class Introduction extends AppCompatActivity {
     }
 
     public void openLogin() {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(Introduction.this,LoginActivity.class));
     }
 
     public void openRegister() {
-        Intent intent = new Intent(this, RegistrationActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(Introduction.this,RegistrationActivity.class));
     }
 }

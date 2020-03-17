@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#353A50"
     tools:context="com.synnlabz.seist.SettingsActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        app:itemBackground="@color/white"
         app:itemIconSize="35dp"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
@@ -29,7 +29,7 @@
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/graylight"
+            android:background="#353A50"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -41,7 +41,7 @@
                     android:id="@+id/rel_lay_8"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:background="#FFFFFF"
+                    android:background="#353A50"
                     android:orientation="horizontal">
 
                     <pl.bclogic.pulsator4droid.library.PulsatorLayout
@@ -97,7 +97,7 @@
                         android:layout_toRightOf="@+id/pulsator"
                         android:fontFamily="@font/roboto_regular"
                         android:text="Malith Ileperuma"
-                        android:textColor="#000"
+                        android:textColor="@color/white"
                         android:textSize="22sp"
                         android:textStyle="bold" />
 
@@ -108,11 +108,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@id/rel_lay_8"
-                    android:background="@drawable/btn_blue"
+                    android:background="@color/transparent"
                     android:src="@drawable/ic_info"/>
 
             </RelativeLayout>
 
+            <include layout="@layout/item_divider" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -123,7 +124,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackground"
+                    android:background="#353A50"
                     android:orientation="horizontal"
                     android:padding="20sp">
 
@@ -159,8 +160,8 @@
                             android:fontFamily="@font/roboto_regular"
                             android:inputType="text"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="#212121"
-                            android:textCursorDrawable="@color/black" />
+                            android:textColor="@color/white"
+                            android:textCursorDrawable="@color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -170,7 +171,7 @@
                             android:layout_marginTop="8dp"
                             android:text="About Me"
                             android:fontFamily="@font/roboto_regular"
-                            android:textColor="#727272" />
+                            android:textColor="#F2F4F4" />
 
                     </LinearLayout>
 
@@ -182,7 +183,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackground"
+                    android:background="#353A50"
                     android:orientation="horizontal"
                     android:padding="20sp"
                     android:weightSum="4">
@@ -222,8 +223,8 @@
                             android:maxLength="10"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:fontFamily="@font/roboto_regular"
-                            android:textColor="#212121"
-                            android:textCursorDrawable="@color/black" />
+                            android:textColor="@color/white"
+                            android:textCursorDrawable="@color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -233,7 +234,7 @@
                             android:layout_marginTop="8dp"
                             android:text="Contact No"
                             android:fontFamily="@font/roboto_regular"
-                            android:textColor="#727272" />
+                            android:textColor="#F2F4F4" />
 
                     </LinearLayout>
 
@@ -273,8 +274,8 @@
                             android:inputType="number"
                             android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="#212121"
-                            android:textCursorDrawable="@color/black" />
+                            android:textColor="@color/white"
+                            android:textCursorDrawable="@color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -284,7 +285,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/roboto_regular"
                             android:text="Age"
-                            android:textColor="#727272" />
+                            android:textColor="#F2F4F4" />
 
                     </LinearLayout>
 
@@ -296,7 +297,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackground"
+                    android:background="#353A50"
                     android:orientation="horizontal"
                     android:padding="20sp">
 
@@ -332,8 +333,8 @@
                             android:hint="Enter your Faculty here"
                             android:inputType="text"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="#212121"
-                            android:textCursorDrawable="@color/black" />
+                            android:textColor="@color/white"
+                            android:textCursorDrawable="@color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -343,7 +344,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/roboto_regular"
                             android:text="Faculty"
-                            android:textColor="#727272" />
+                            android:textColor="#F2F4F4" />
 
                     </LinearLayout>
 
@@ -355,7 +356,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackground"
+                    android:background="#353A50"
                     android:orientation="horizontal"
                     android:padding="20sp"
                     android:weightSum="4">
@@ -395,8 +396,8 @@
                             android:background="@color/transparent"
                             android:fontFamily="@font/roboto_regular"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="#212121"
-                            android:textCursorDrawable="@color/black" />
+                            android:textColor="@color/white"
+                            android:textCursorDrawable="@color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -406,7 +407,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/roboto_regular"
                             android:text="Degree"
-                            android:textColor="#727272" />
+                            android:textColor="#F2F4F4" />
 
                     </LinearLayout>
 
@@ -444,9 +445,8 @@
                             android:maxLength="2"
                             android:inputType="number"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="#212121"
-                            android:fontFamily="@font/roboto_regular"
-                            android:textCursorDrawable="@color/black" />
+                            android:textColor="@color/white"
+                            android:textCursorDrawable="@color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -456,7 +456,7 @@
                             android:layout_marginTop="8dp"
                             android:text="Intake"
                             android:fontFamily="@font/roboto_regular"
-                            android:textColor="#727272" />
+                            android:textColor="#F2F4F4" />
 
                     </LinearLayout>
 
@@ -468,7 +468,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackground">
+                    android:background="#353A50">
 
                     <Button
                         android:id="@+id/confirm"
@@ -479,11 +479,11 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="15sp"
-                        android:background="@drawable/button_border_red"
+                        android:background="@drawable/button"
                         android:elevation="100dp"
                         android:fontFamily="@font/roboto_regular"
                         android:text="Save Details"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -491,7 +491,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackground">
+                    android:background="#353A50">
 
                     <Button
                         android:id="@+id/logout"
@@ -500,12 +500,12 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="10sp"
-                        android:background="@drawable/button_border_red"
+                        android:background="@drawable/button"
                         android:fontFamily="@font/roboto_regular"
                         android:onClick="logoutUser"
                         android:text="Logout"
                         android:elevation="100dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                 </LinearLayout>

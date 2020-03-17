@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#353A50"
     android:orientation="vertical">
 
     <LinearLayout
@@ -37,7 +38,7 @@
                     android:paddingLeft="100sp"
                     android:textSize="18dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:text="Name"/>
 
                 <LinearLayout
@@ -51,6 +52,7 @@
                         android:paddingBottom="10sp"
                         android:textSize="13dp"
                         android:paddingLeft="100sp"
+                        android:textColor="#F4F6F6"
                         android:fontFamily="@font/roboto_regular"
                         android:text="Intake"/>
 
@@ -61,6 +63,7 @@
                         android:paddingBottom="10sp"
                         android:paddingLeft="4sp"
                         android:textSize="13dp"
+                        android:textColor="#F4F6F6"
                         android:fontFamily="@font/roboto_regular"
                         android:text="35"/>
 
@@ -70,6 +73,7 @@
                         android:paddingBottom="10sp"
                         android:paddingLeft="10sp"
                         android:textSize="13dp"
+                        android:textColor="#F4F6F6"
                         android:fontFamily="@font/roboto_regular"
                         android:text="|"/>
 
@@ -80,6 +84,7 @@
                         android:paddingBottom="10sp"
                         android:paddingLeft="10sp"
                         android:textSize="13dp"
+                        android:textColor="#F4F6F6"
                         android:fontFamily="@font/roboto_regular"
                         android:text="CS"/>
                 </LinearLayout>

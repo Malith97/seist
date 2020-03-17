@@ -87,6 +87,10 @@ public class RegistrationActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.password);
         mName = (EditText) findViewById(R.id.name);
 
+        mEmail.setHintTextColor(Color.GRAY);
+        mPassword.setHintTextColor(Color.GRAY);
+        mName.setHintTextColor(Color.GRAY);
+
         mRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:divider="?android:dividerHorizontal"
+    android:background="#353A50"
     android:orientation="vertical"
     android:showDividers="middle">
 
@@ -11,30 +12,37 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="#353A50"
         app:imageResources="@array/img_id_arr"/>
 
     <LinearLayout
         style="?android:buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#353A50"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/register_button"
-            android:background="@drawable/button_white"
+            android:background="#FDBA13"
             android:fontFamily="@font/roboto_regular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:layout_weight="1"
-            android:text="Sign Up" />
+            android:textStyle="bold"
+            android:text="Sign Up"
+            />
 
         <Button
             android:id="@+id/login_button"
-            android:background="@drawable/button_white"
+            android:background="#FDBA13"
             android:fontFamily="@font/roboto_regular"
             android:layout_width="0dp"
+            android:textColor="@color/white"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textStyle="bold"
             android:text="Log in" />
 
     </LinearLayout>

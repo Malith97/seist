@@ -14,10 +14,10 @@
 
     <!-- introduction pictures-->
     <integer-array name="img_id_arr">
-        <item>@drawable/frame_01</item>
-        <item>@drawable/frame_02</item>
-        <item>@drawable/frame_03</item>
-        <item>@drawable/frame_04</item>
+        <item>@drawable/dark_frame_01</item>
+        <item>@drawable/dark_frame_02</item>
+        <item>@drawable/dark_frame_03</item>
+        <item>@drawable/dark_frame_04</item>
     </integer-array>
 
 </resources>

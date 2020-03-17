@@ -5,44 +5,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/chat_back"
+    android:background="@drawable/whatsapp_dark"
     tools:context="com.synnlabz.seist.Chat.ChatActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/lightred"
+        android:layout_height="60dp"
+        android:background="#353A50"
         android:minHeight="?attr/actionBarSize">
 
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:onClick="backToMatches"
-            android:background="@drawable/btn_arrow"
+            android:background="@color/transparent"
             android:fontFamily="@font/g_light"
             android:textColor="@color/white"
             android:src="@drawable/ic_arrow"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImagechat"
-            android:layout_width="40dp"
+            android:layout_width="50dp"
             android:clickable="true"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="20dp"
             android:onClick="ViewProfile"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:src="@drawable/default_user">
         </de.hdodenhof.circleimageview.CircleImageView>
 
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Name"
-            android:textSize="19sp"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="@color/white"
-            android:layout_marginLeft="15sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Name"
+                android:textSize="17sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/white"
+                android:layout_marginLeft="15sp"/>
+
+            <TextView
+                android:id="@+id/onlineStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Online"
+                android:textSize="11sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/white"
+                android:layout_marginLeft="15.2sp"/>
+        </LinearLayout>
+
+
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -50,7 +68,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/chat_back"
+        android:background="@drawable/whatsapp_dark"
         android:layout_below="@id/toolbar"
         android:layout_above="@id/bottom"/>
 

@@ -4,6 +4,8 @@ import android.content.Intent;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.service.autofill.Validator;
@@ -51,6 +53,9 @@ public class LoginActivity extends AppCompatActivity{
 
         mEmail = (EditText) findViewById(R.id.email);
         mPassword = (EditText) findViewById(R.id.password);
+
+        mEmail.setHintTextColor(Color.GRAY);
+        mPassword.setHintTextColor(Color.GRAY);
 
         rellay1 = (RelativeLayout) findViewById(R.id.rellay1);
         rellay2 = (RelativeLayout) findViewById(R.id.rellay2);

@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="50dp"
+    android:background="#EAECEE"
     android:gravity="center">
 
     <com.agrawalsuneet.dotsloader.loaders.LazyLoader
@@ -16,11 +17,11 @@
         app:lazyloader_dotsDist="10dp"
         app:lazyloader_dotsRadius="16dp"
         app:lazyloader_firstDelayDur="150"
-        app:lazyloader_firstDotColor="#F5B7B1"
+        app:lazyloader_firstDotColor="#D6DBDF"
         app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
         app:lazyloader_secondDelayDur="300"
-        app:lazyloader_secondDotColor="#EC7063 "
-        app:lazyloader_thirdDotColor="#E74C3C"/>
+        app:lazyloader_secondDotColor="#85929E"
+        app:lazyloader_thirdDotColor="#2E4053"/>
 
     <TextView
         android:layout_width="wrap_content"
