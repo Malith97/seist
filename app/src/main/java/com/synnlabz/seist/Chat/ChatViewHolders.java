@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.synnlabz.seist.R;
 
 public class ChatViewHolders extends RecyclerView.ViewHolder implements View.OnClickListener{
-    public TextView mMessage,mChatName;
+    public TextView mMessage,mChatName , mChatStatus;
     public CardView mCard;
     public LinearLayout mContainer , mLinear;
     public ChatViewHolders(View itemView) {
@@ -24,6 +24,7 @@ public class ChatViewHolders extends RecyclerView.ViewHolder implements View.OnC
         mContainer = itemView.findViewById(R.id.container);
 
         mChatName = itemView.findViewById(R.id.username);
+        mChatStatus = itemView.findViewById(R.id.onlineStatus);
     }
 
     @Override

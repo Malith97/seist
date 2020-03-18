@@ -9,6 +9,7 @@ import android.provider.MediaStore;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -276,6 +277,25 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
+    private void status(String status){
+        DatabaseReference currentUserDb = FirebaseDatabase.getInstance().getReference("Users").child(userId);
+        Map userInfo = new HashMap<>();
+        userInfo.put("status", status);
+        currentUserDb.updateChildren(userInfo);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        status("online");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        status("offline");
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -287,12 +307,14 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void logoutUser(View view) {
-        mAuth.signOut();
-        Intent intent = new Intent(SettingsActivity.this, LoginActivity.class);
-        intent.putExtra("finish", true);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        finish();
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(SettingsActivity.this,LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        //mAuth.signOut();
+        //Intent intent = new Intent(SettingsActivity.this, LoginActivity.class);
+        //intent.putExtra("finish", true);
+        //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        //startActivity(intent);
+        //finish();
         return;
     }
 

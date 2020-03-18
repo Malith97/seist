@@ -35,7 +35,9 @@ import com.synnlabz.seist.Cards.cards;
 import com.synnlabz.seist.Matches.MatchesActivity;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -235,5 +237,25 @@ public class MainActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
+    }
+
+    private void status(String status){
+        String userId = mAuth.getCurrentUser().getUid();
+        DatabaseReference currentUserDb = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+        Map userInfo = new HashMap<>();
+        userInfo.put("status", status);
+        currentUserDb.updateChildren(userInfo);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        status("online");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        status("offline");
     }
 }

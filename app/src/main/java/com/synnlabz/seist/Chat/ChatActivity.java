@@ -35,7 +35,7 @@ public class ChatActivity extends AppCompatActivity {
 
     private EditText mSendEditText;
 
-    private TextView mUserName;
+    private TextView mUserName , mOnlineStatus;
     private ImageView mProfileImage;
 
     private ImageButton mSendButton , mDetails;
@@ -49,7 +49,10 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         matchId = getIntent().getExtras().getString("matchId");
+
         mUserName = findViewById(R.id.username);
+        mOnlineStatus = findViewById(R.id.onlineStatus);
+
         mProfileImage = (ImageView) findViewById(R.id.profileImagechat);
 
         currentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -124,6 +127,10 @@ public class ChatActivity extends AppCompatActivity {
                     if(map.get("name")!=null){
                         String name = map.get("name").toString();
                         mUserName.setText(name);
+                    }
+                    if(map.get("status")!=null){
+                        String status = map.get("status").toString();
+                        mOnlineStatus.setText(status);
                     }
                     Glide.clear(mProfileImage);
                     if(map.get("profileImageUrl")!=null){

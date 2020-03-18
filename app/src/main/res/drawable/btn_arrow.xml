@@ -5,7 +5,7 @@
     <size android:height="40dp"
         android:width="40dp"/>
 
-    <solid android:color="@color/lightred"/>
+    <solid android:color="@color/lightbuttonColour"/>
     <corners android:radius="40sp"/>
 
 </shape>

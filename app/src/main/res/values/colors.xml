@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#23A7D8</color>
-    <color name="colorPrimaryDark">#23A7D8</color>
-    <color name="colorAccent">#FFFFFF</color>
 
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="transparent">#00000000</color>
-    <color name="gradStart">#D24D57</color>
-    <color name="gradStop">#C91F37</color>
-    <color name="lightred">#C3272B</color>
-    <color name="proColor">#FAE7E7</color>
 
-    <color name="graylight">#fafafa</color>
-    <color name="startblue">#09c6df</color>
-    <color name="endblue">#0bcce6</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="darktextColour">#F7F9F9</color>
+    <color name="lighttextColour">#212F3D</color>
+
+    <color name="lightbackgroundColour">#F4F6F7</color>
+    <color name="darkbackgroundColour">#353A50</color>
+
+    <color name="lighticonColour">#212F3D</color>
+    <color name="darkiconColour">#F2F4F4</color>
+
+    <color name="lightbuttonColour">#B03A2E</color>
+    <color name="darkbuttonColour">#FDBA13</color>
+
 </resources>
 
 

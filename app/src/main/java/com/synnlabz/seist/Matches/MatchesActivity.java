@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,7 +24,9 @@ import com.synnlabz.seist.R;
 import com.synnlabz.seist.SettingsActivity;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MatchesActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
@@ -31,6 +34,7 @@ public class MatchesActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mMatchesLayoutManager;
 
     private String cusrrentUserID;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +63,16 @@ public class MatchesActivity extends AppCompatActivity {
             }
         });
 
+        final SwipeRefreshLayout pullToRefresh = findViewById(R.id.pullToRefresh);
+        pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                startActivity(new Intent(getApplicationContext(),MatchesActivity.class));
+                overridePendingTransition(0,0);
+                pullToRefresh.setRefreshing(false);
+            }
+        });
+
         cusrrentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
@@ -66,7 +80,7 @@ public class MatchesActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mMatchesLayoutManager = new LinearLayoutManager(MatchesActivity.this);
         mRecyclerView.setLayoutManager(mMatchesLayoutManager);
-        mMatchesAdapter = new MatchesAdapter(getDataSetMatches(), MatchesActivity.this);
+        mMatchesAdapter = new MatchesAdapter(getDataSetMatches(), MatchesActivity.this); //ischatfalse
         mRecyclerView.setAdapter(mMatchesAdapter);
 
         getUserMatchId();
@@ -102,6 +116,7 @@ public class MatchesActivity extends AppCompatActivity {
                     String name = "";
                     String intake = "";
                     String degree = "";
+                    String status = "";
                     String profileImageUrl = "";
                     if(dataSnapshot.child("name").getValue()!=null){
                         name = dataSnapshot.child("name").getValue().toString();
@@ -112,12 +127,15 @@ public class MatchesActivity extends AppCompatActivity {
                     if(dataSnapshot.child("degree").getValue()!=null){
                         degree = dataSnapshot.child("degree").getValue().toString();
                     }
+                    if(dataSnapshot.child("status").getValue()!=null){
+                        status = dataSnapshot.child("status").getValue().toString();
+                    }
                     if(dataSnapshot.child("profileImageUrl").getValue()!=null){
                         profileImageUrl = dataSnapshot.child("profileImageUrl").getValue().toString();
                     }
 
 
-                    MatchesObject obj = new MatchesObject(userId, name, intake , degree , profileImageUrl);
+                    MatchesObject obj = new MatchesObject(userId, name, intake , degree, status , profileImageUrl);
                     resultsMatches.add(obj);
                     mMatchesAdapter.notifyDataSetChanged();
                 }
@@ -131,26 +149,29 @@ public class MatchesActivity extends AppCompatActivity {
 
     }
 
+    private void status(String status){
+        String userId = cusrrentUserID;
+        DatabaseReference currentUserDb = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+        Map userInfo = new HashMap<>();
+        userInfo.put("status", status);
+        currentUserDb.updateChildren(userInfo);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        status("online");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        status("offline");
+    }
+
     private ArrayList<MatchesObject> resultsMatches = new ArrayList<MatchesObject>();
     private List<MatchesObject> getDataSetMatches() {
         return resultsMatches;
     }
 
-    public void goToSettings(View view) {
-        Intent intent = new Intent(MatchesActivity.this, SettingsActivity.class);
-        startActivity(intent);
-        return;
-    }
-
-    public void goToHome(View view) {
-        Intent intent = new Intent(MatchesActivity.this, MainActivity.class);
-        startActivity(intent);
-        return;
-    }
-
-    public void goToMatches(View view) {
-        Intent intent = new Intent(MatchesActivity.this, MatchesActivity.class);
-        startActivity(intent);
-        return;
-    }
 }

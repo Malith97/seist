@@ -24,7 +24,7 @@
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ABB2B9"
+            android:background="#E5E7E9"
             android:orientation="vertical">
 
             <ImageView
@@ -37,9 +37,9 @@
                 android:id="@+id/name"
                 android:textSize="20sp"
                 android:paddingStart="15sp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:gravity="center|left"
-                android:background="#ABB2B9"
+                android:background="#E5E7E9"
                 android:fontFamily="@font/roboto_regular"
                 tools:text="hello"
                 android:layout_width="match_parent"
@@ -48,26 +48,27 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
 
                 <TextView
                     android:textSize="13sp"
-                    android:paddingLeft="18sp"
+                    android:paddingLeft="10sp"
                     android:gravity="center|left"
                     android:fontFamily="@font/roboto_regular"
                     android:text="Intake"
-                    android:textColor="#EAECEE"
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="20dp"  />
 
                 <TextView
                     android:id="@+id/intake"
                     android:textSize="13sp"
-                    android:paddingLeft="5sp"
                     android:gravity="center|left"
+                    android:layout_marginStart="3dp"
                     android:fontFamily="@font/roboto_regular"
                     android:text="35"
-                    android:textColor="#EAECEE "
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="20dp"  />
 

@@ -28,7 +28,7 @@
             android:id="@+id/profileImagechat"
             android:layout_width="50dp"
             android:clickable="true"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="30dp"
             android:onClick="ViewProfile"
             android:layout_height="50dp"
             android:src="@drawable/default_user">
@@ -53,7 +53,7 @@
                 android:id="@+id/onlineStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Online"
+                android:text="Offline"
                 android:textSize="11sp"
                 android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/white"

@@ -5,12 +5,14 @@ public class MatchesObject {
     private String name;
     private String intake;
     private String degree;
+    private String status;
     private String profileImageUrl;
-    public MatchesObject (String userId, String name, String intake , String degree , String profileImageUrl){
+    public MatchesObject (String userId, String name, String intake , String degree , String status,String profileImageUrl){
         this.userId = userId;
         this.name = name;
         this.intake = intake;
         this.degree = degree;
+        this.status = status;
         this.profileImageUrl = profileImageUrl;
     }
 
@@ -40,6 +42,13 @@ public class MatchesObject {
     }
     public void setDegree(String degree){
         this.degree = degree;
+    }
+
+    public String getStatus(){
+        return status;
+    }
+    public void setStatus(String status){
+        this.status = status;
     }
 
     public String getProfileImageUrl(){
