@@ -18,6 +18,20 @@
         app:menu="@menu/top_navigation_toolbar"
         android:layout_alignParentTop="true"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/rewind_button"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/rewind_blue_24dp"
+        app:backgroundTint="@android:color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        app:fabSize="normal"
+        android:onClick="refresh"
+        app:rippleColor="#225BC9FA" />
+
     <com.lorentzos.flingswipe.SwipeFlingAdapterView
         android:id="@+id/frame"
         android:layout_width="match_parent"

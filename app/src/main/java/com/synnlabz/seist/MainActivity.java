@@ -55,13 +55,15 @@ public class MainActivity extends AppCompatActivity {
 
     ListView listView;
     List<cards> rowItems;
+    private Handler mHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        this.mHandler = new Handler();
+        this.mHandler.postDelayed(m_Runnable,5000);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.main);
@@ -144,6 +146,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    private final Runnable m_Runnable = new Runnable(){
+        public void run(){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            overridePendingTransition(0,0);
+            MainActivity.this.mHandler.postDelayed(m_Runnable, 10000);
+        }
+    };//runnable
+
 
     private void isConnectionMatch(String userId) {
         DatabaseReference currentUserConnectionsDb = usersDb.child(currentUId).child("connections").child("yeps").child(userId);
@@ -257,5 +268,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         status("offline");
+        mHandler.removeCallbacks(m_Runnable);
+    }
+
+    public void refresh(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        overridePendingTransition(0,0);
     }
 }
